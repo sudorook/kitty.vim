@@ -1,0 +1,5 @@
+#! /bin/bash
+set -eu
+
+kitty +launch ./src/gen_syntax.py "src/kitty.vim.in" "syntax/kitty.vim"
+echo "Done."

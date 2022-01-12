@@ -8,20 +8,29 @@
 #   kitty +runpy 'from kitty.actions import get_all_actions; actions=sorted(list({a.name for _, act_list in get_all_actions().items() for a in act_list})); print(actions)'
 #   kitty +runpy 'from kitty.config import option_names_for_completion; opts=sorted(list(set(option_names_for_completion()))); print(opts)'
 
+import sys
+import os
 import textwrap as tw
 from kitty.actions import get_all_actions
 from kitty.config import option_names_for_completion
 
-INFILE="kitty.vim.in"
-OUTFILE="../syntax/kitty.vim"
-
 if __name__ == "__main__":
+    # Set and check inputs.
+    if os.path.exists(sys.argv[1]):
+        INFILE = sys.argv[1]
+    if sys.argv[2]:
+        OUTFILE = sys.argv[2]
+
+    # Instantiate text wrapper object.
     wrapper = tw.TextWrapper(
         initial_indent="  \\ ", subsequent_indent="  \\ ", width=78
     )
 
-    EXTRAS = { "click" } # hard-code some missing keywords...
+    # 'Click' keyword is missing from kitty actions list as of 0.24.0, so add
+    # it manually.
+    EXTRAS = {"click"}
 
+    # Get all kitty actions and options and convert to list.
     ALL_OPTIONS = " ".join(option_names_for_completion())
     ALL_ACTIONS = " ".join(
         sorted(
@@ -35,6 +44,7 @@ if __name__ == "__main__":
         )
     )
 
+    # Generate text blocks to write to file.
     KITTY_KEYWORDS = "syn keyword kittyKeyword contained\n" + wrapper.fill(
         ALL_OPTIONS
     )
@@ -44,8 +54,7 @@ if __name__ == "__main__":
 
     with open(INFILE, "r", encoding="utf-8") as f:
         infile = f.read()
-
-    updated_file = infile + "\n" + KITTY_KEYWORDS + "\n" + "\n" + KITTY_ACTIONS
+        updated_text = infile + "\n" + KITTY_KEYWORDS + "\n\n" + KITTY_ACTIONS
 
     with open(OUTFILE, "w", encoding="utf-8") as f:
-        f.writelines(updated_file)
+        f.writelines(updated_text)

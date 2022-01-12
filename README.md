@@ -7,8 +7,8 @@ into the `.vim/pack/dist/start` subdirectory.
 
 To rebuild the 'kitty.vim' file, run:
 ```
-cd src/
-kitty +launch ./gen_syntax.py
+./build
 ```
 
-The script will overwrite the file in `syntax/kitty.vim`.
+The `build` script is a wrapper around `src/gen_syntax.py` and will overwrite
+the file in `syntax/kitty.vim`.

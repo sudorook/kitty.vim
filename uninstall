@@ -1,0 +1,21 @@
+#! /bin/bash
+set -eu
+
+rm_file() {
+  [ -f "${1}" ] && rm -v "${1}" || true
+}
+
+rm_dir() {
+  [ -d "${1}" ] && rmdir --ignore-fail-on-non-empty "${1}" || true
+}
+
+rm_file "${HOME}/.vim/ftdetect/kitty.vim"
+rm_file "${HOME}/.vim/ftplugin/kitty.vim"
+rm_file "${HOME}/.vim/syntax/kitty.vim"
+rm_file "${HOME}/.vim/syntax/kitty-session.vim"
+
+rm_dir "${HOME}/.vim/ftdetect/"
+rm_dir "${HOME}/.vim/ftplugin/"
+rm_dir "${HOME}/.vim/syntax/"
+
+echo "Done."

@@ -1,0 +1,5 @@
+#! /bin/bash
+set -eu
+
+cp -raf ./ftdetect ./ftplugin ./syntax "${HOME}/.vim/"
+echo "Done."

@@ -10,9 +10,11 @@
 
 import sys
 import os
+import re
 import textwrap as tw
 from kitty.actions import get_all_actions
 from kitty.config import option_names_for_completion
+from kitty.constants import version
 
 if __name__ == "__main__":
     # Set and check inputs.
@@ -50,6 +52,14 @@ if __name__ == "__main__":
         )
     )
 
+    KITTY_VERSION = (
+        str(version.major)
+        + "."
+        + str(version.minor)
+        + "."
+        + str(version.patch)
+    )
+
     # Generate text blocks to write to file.
     KITTY_KEYWORDS = "syn keyword kittyKeyword contained\n" + wrapper.fill(
         ALL_OPTIONS
@@ -60,6 +70,7 @@ if __name__ == "__main__":
 
     with open(INFILE, "r", encoding="utf-8") as f:
         infile = f.read()
+        infile = re.sub("@VERSION@", KITTY_VERSION, infile)
         updated_text = infile + "\n" + KITTY_KEYWORDS + "\n\n" + KITTY_ACTIONS
 
     with open(OUTFILE, "w", encoding="utf-8") as f:

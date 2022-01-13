@@ -1,3 +1,7 @@
+" Vim syntax file
+" Language: Kitty
+" Version: 0.24.1
+
 syn match kittySt '.*$' contains=kittyNumber,kittyColor
 syn match kittyColor '#\x\{3,8}' contained
 syn match kittyNumber '\s[+-]\?\d\+\.\?\d*\(%\|px\|pt\|em\)\?'ms=s+1 contained contains=kittyUnit

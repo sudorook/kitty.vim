@@ -1,5 +1,7 @@
 #! /bin/bash
 set -eu
 
-cp -raf ./ftdetect ./ftplugin ./syntax "${HOME}/.vim/"
+DIR="$(dirname "$0")"
+mkdir -p "${HOME}/.vim"
+cp -raf "${DIR}/ftdetect" "${DIR}/ftplugin" "${DIR}/syntax" "${HOME}/.vim/"
 echo "Done."

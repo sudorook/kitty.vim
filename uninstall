@@ -18,4 +18,13 @@ rm_dir "${HOME}/.vim/ftdetect/"
 rm_dir "${HOME}/.vim/ftplugin/"
 rm_dir "${HOME}/.vim/syntax/"
 
+rm_file "${HOME}/.config/nvim/ftdetect/kitty.vim"
+rm_file "${HOME}/.config/nvim/ftplugin/kitty.vim"
+rm_file "${HOME}/.config/nvim/syntax/kitty.vim"
+rm_file "${HOME}/.config/nvim/syntax/kitty-session.vim"
+
+rm_dir "${HOME}/.config/nvim/ftdetect/"
+rm_dir "${HOME}/.config/nvim/ftplugin/"
+rm_dir "${HOME}/.config/nvim/syntax/"
+
 echo "Done."

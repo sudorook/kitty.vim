@@ -2,11 +2,15 @@
 set -eu
 
 rm_file() {
-  [ -f "${1}" ] && rm -v "${1}" || true
+  if [ -f "${1}" ]; then
+    rm -v "${1}"
+  fi
 }
 
 rm_dir() {
-  [ -d "${1}" ] && rmdir --ignore-fail-on-non-empty "${1}" || true
+  if [ -d "${1}" ]; then
+    rmdir --ignore-fail-on-non-empty "${1}" || true
+  fi
 }
 
 rm_file "${HOME}/.vim/ftdetect/kitty.vim"

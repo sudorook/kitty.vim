@@ -4,22 +4,20 @@ Vim syntax files for kitty session and config files.
 
 ## Install
 
-To install, you can clone this repository to your Vim dot-directory as a
-plugin, or your can run the `./install` script.
+To install, you can 1) clone this repository to your Vim dot-directory as a
+plugin or 2) run the `./install` script.
 
-If you use the latter option, you can uninstall this plugin by using the
+If you use the latter option, you can uninstall this plugin by running the
 `./uninstall` script.
 
 ## Update
 
-To update the syntax file using a new version of `kitty`, use the `build`
-script to rebuild the 'kitty.vim' file:
-```
-./build
-```
+Future releases of kitty may introduce new keywords. To update the syntax file,
+run the `build` script, a wrapper around `src/gen_syntax.py` that will
+overwrite `syntax/kitty.vim`.
 
-The `build` script is a wrapper around `src/gen_syntax.py` and will overwrite
-the file in `syntax/kitty.vim`.
+This repository will be kept up-to-date with new kitty releases, so if you
+installed the syntax rules as a Vim plugin, simply update the plugin (i.e. pull
+changes).
 
-Then, re-install this plugin to copy the updated syntax rules to your Vim
-setup.
+Otherwise, re-run `./install` after running `./build`.

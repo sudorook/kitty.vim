@@ -23,8 +23,6 @@ syn region kittyKeybind start='\s' end='\s' contains=kittyMod contained nextgrou
 syn match kittyActionKW '\s*\S*\s*' contained contains=kittyAction,kittyInvalidAction
 syn match kittyInvalidAction '\S*' contained
 
-syn keyword kittyMod contained ctrl alt shift cmd super hyper meta kitty_mod
-
 hi def link kittyComment Comment
 hi def link kittyTodo Todo
 hi def link kittyString String
@@ -41,6 +39,10 @@ hi def link kittyNumber Number
 hi def link kittyUnit Type
 
 let b:current_syntax = "kitty"
+
+syn keyword kittyMod contained
+  \ alt cmd command control ctrl kitty kitty_mod opt option shift super ⇧ ⌃ ⌘
+  \ ⌥
 
 syn keyword kittyKeyword contained
   \ action_alias active_border_color active_tab_background

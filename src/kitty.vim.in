@@ -23,8 +23,6 @@ syn region kittyKeybind start='\s' end='\s' contains=kittyMod contained nextgrou
 syn match kittyActionKW '\s*\S*\s*' contained contains=kittyAction,kittyInvalidAction
 syn match kittyInvalidAction '\S*' contained
 
-syn keyword kittyMod contained ctrl alt shift cmd super hyper meta kitty_mod
-
 hi def link kittyComment Comment
 hi def link kittyTodo Todo
 hi def link kittyString String

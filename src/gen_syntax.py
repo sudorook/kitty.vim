@@ -15,6 +15,7 @@ import textwrap as tw
 from kitty.actions import get_all_actions
 from kitty.config import option_names_for_completion
 from kitty.constants import version
+from kitty.options import utils
 
 if __name__ == "__main__":
     # Set and check inputs.
@@ -39,6 +40,16 @@ if __name__ == "__main__":
     EXTRAS = {"click"}
 
     # Get all kitty actions and options and convert to list.
+    ALL_MODS = " ".join(
+        sorted(
+            [
+                item.lower()
+                for item in set(utils.mod_map.keys()).union(
+                    set(utils.mod_map.values())
+                )
+            ]
+        )
+    )
     ALL_OPTIONS = " ".join(option_names_for_completion())
     ALL_ACTIONS = " ".join(
         sorted(
@@ -61,6 +72,7 @@ if __name__ == "__main__":
     )
 
     # Generate text blocks to write to file.
+    KITTY_MODS = "syn keyword kittyMod contained\n" + wrapper.fill(ALL_MODS)
     KITTY_KEYWORDS = "syn keyword kittyKeyword contained\n" + wrapper.fill(
         ALL_OPTIONS
     )
@@ -71,7 +83,15 @@ if __name__ == "__main__":
     with open(INFILE, "r", encoding="utf-8") as f:
         infile = f.read()
         infile = re.sub("@VERSION@", KITTY_VERSION, infile)
-        updated_text = infile + "\n" + KITTY_KEYWORDS + "\n\n" + KITTY_ACTIONS
+        updated_text = (
+            infile
+            + "\n"
+            + KITTY_MODS
+            + "\n\n"
+            + KITTY_KEYWORDS
+            + "\n\n"
+            + KITTY_ACTIONS
+        )
 
     with open(OUTFILE, "w", encoding="utf-8") as f:
         f.writelines(updated_text)

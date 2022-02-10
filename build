@@ -2,5 +2,5 @@
 set -eu
 
 DIR="$(dirname "$0")"
-kitty +launch "${DIR}/src/gen_syntax.py" "src/kitty.vim.in" "syntax/kitty.vim"
+kitty +launch "${DIR}/src/gen_syntax.py" "${DIR}/src/kitty.vim.in" "${DIR}/syntax/kitty.vim"
 echo "Done."

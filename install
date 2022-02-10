@@ -6,9 +6,9 @@ DIR="$(dirname "$0")"
 # Install for Vim.
 mkdir -p "${HOME}/.vim"
 cp -raf "${DIR}/ftdetect" "${DIR}/ftplugin" "${DIR}/syntax" "${HOME}/.vim/"
-echo "Done."
 
 # Install for Neovim.
 mkdir -p "${HOME}/.config/nvim"
 cp -raf "${DIR}/ftdetect" "${DIR}/ftplugin" "${DIR}/syntax" "${HOME}/.config/nvim/"
+
 echo "Done."

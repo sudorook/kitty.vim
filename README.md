@@ -13,8 +13,8 @@ If you use the latter option, you can uninstall this plugin by running the
 ## Update
 
 Future releases of kitty may introduce new keywords. To update the syntax file,
-run the `build` script, a wrapper around `src/gen_syntax.py` that will
-overwrite `syntax/kitty.vim`.
+run the `build` script. `build` is a wrapper around `src/gen_syntax.py` that
+will overwrite `syntax/kitty.vim`.
 
 This repository will be kept up-to-date with new kitty releases, so if you
 installed the syntax rules as a Vim plugin, simply update the plugin (i.e. pull

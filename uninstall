@@ -1,34 +1,84 @@
 #! /bin/bash
 set -eu
 
-rm_file() {
+function rm_file {
   if [ -f "${1}" ]; then
     rm -v "${1}"
   fi
 }
 
-rm_dir() {
+function rm_dir {
   if [ -d "${1}" ]; then
-    rmdir --ignore-fail-on-non-empty "${1}" || true
+    rmdir -p --ignore-fail-on-non-empty "${1}" || true
   fi
 }
 
-rm_file "${HOME}/.vim/ftdetect/kitty.vim"
-rm_file "${HOME}/.vim/ftplugin/kitty.vim"
-rm_file "${HOME}/.vim/syntax/kitty.vim"
-rm_file "${HOME}/.vim/syntax/kitty-session.vim"
+function uninstall_vim {
+  local vimdir="${HOME}/.vim"
 
-rm_dir "${HOME}/.vim/ftdetect/"
-rm_dir "${HOME}/.vim/ftplugin/"
-rm_dir "${HOME}/.vim/syntax/"
+  rm_file "${vimdir}/ftdetect/kitty.vim"
+  rm_file "${vimdir}/ftplugin/kitty.vim"
+  rm_file "${vimdir}/syntax/kitty.vim"
+  rm_file "${vimdir}/syntax/kitty-session.vim"
 
-rm_file "${HOME}/.config/nvim/ftdetect/kitty.vim"
-rm_file "${HOME}/.config/nvim/ftplugin/kitty.vim"
-rm_file "${HOME}/.config/nvim/syntax/kitty.vim"
-rm_file "${HOME}/.config/nvim/syntax/kitty-session.vim"
+  rm_dir "${vimdir}/ftdetect/"
+  rm_dir "${vimdir}/ftplugin/"
+  rm_dir "${vimdir}/syntax/"
+}
 
-rm_dir "${HOME}/.config/nvim/ftdetect/"
-rm_dir "${HOME}/.config/nvim/ftplugin/"
-rm_dir "${HOME}/.config/nvim/syntax/"
+function uninstall_neovim {
+  local nvimdir="${HOME}/.config/nvim"
+
+  rm_file "${nvimdir}/ftdetect/kitty.vim"
+  rm_file "${nvimdir}/ftplugin/kitty.vim"
+  rm_file "${nvimdir}/syntax/kitty.vim"
+  rm_file "${nvimdir}/syntax/kitty-session.vim"
+
+  rm_dir "${nvimdir}/ftdetect/"
+  rm_dir "${nvimdir}/ftplugin/"
+  rm_dir "${nvimdir}/syntax/"
+}
+
+function print_usage {
+  echo "./uninstall usage:"
+  echo "  -v|--vim         uninstall Vim files"
+  echo "  -n|--neovim      uninstall Neovim files"
+  echo "  -h|--help        print this message"
+}
+
+OPTIONS=vnh
+LONGOPTIONS=vim,neovim,help
+PARSED=$(getopt -o ${OPTIONS} --long ${LONGOPTIONS} -n "${0}" -- "${@}")
+eval set -- "${PARSED}"
+
+if [ ${#} -eq 1 ]; then
+  uninstall_vim
+  uninstall_neovim
+fi
+
+while [ ${#} -ge 1 ]; do
+  case ${1} in
+    -v|--vim)
+      uninstall_vim
+      shift
+      ;;
+    -n|--neovim)
+      uninstall_neovim
+      shift
+      ;;
+    -h|--help)
+      print_usage
+      exit
+      ;;
+    --)
+      shift
+      break
+      ;;
+    *)
+      echo "ERROR: invalid flag ${2@Q}."
+      exit 3
+      ;;
+  esac
+done
 
 echo "Done."

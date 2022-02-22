@@ -3,12 +3,56 @@ set -eu
 
 DIR="$(dirname "$0")"
 
-# Install for Vim.
-mkdir -p "${HOME}/.vim"
-cp -raf "${DIR}/ftdetect" "${DIR}/ftplugin" "${DIR}/syntax" "${HOME}/.vim/"
+function install_vim {
+  mkdir -p "${HOME}/.vim"
+  cp -raf "${DIR}/ftdetect" "${DIR}/ftplugin" "${DIR}/syntax" "${HOME}/.vim/"
+}
 
-# Install for Neovim.
-mkdir -p "${HOME}/.config/nvim"
-cp -raf "${DIR}/ftdetect" "${DIR}/ftplugin" "${DIR}/syntax" "${HOME}/.config/nvim/"
+function install_neovim {
+  mkdir -p "${HOME}/.config/nvim"
+  cp -raf "${DIR}/ftdetect" "${DIR}/ftplugin" "${DIR}/syntax" "${HOME}/.config/nvim/"
+}
+
+function print_usage {
+  echo "./install usage:"
+  echo "  -v|--vim         install Vim files"
+  echo "  -n|--neovim      install Neovim files"
+  echo "  -h|--help        print this message"
+}
+
+OPTIONS=vnh
+LONGOPTIONS=vim,neovim,help
+PARSED=$(getopt -o ${OPTIONS} --long ${LONGOPTIONS} -n "${0}" -- "${@}")
+eval set -- "${PARSED}"
+
+if [ ${#} -eq 1 ]; then
+  install_vim
+  install_neovim
+fi
+
+while [ ${#} -ge 1 ]; do
+  case ${1} in
+    -v|--vim)
+      install_vim
+      shift
+      ;;
+    -n|--neovim)
+      install_neovim
+      shift
+      ;;
+    -h|--help)
+      print_usage
+      exit
+      ;;
+    --)
+      shift
+      break
+      ;;
+    *)
+      echo "ERROR: invalid flag ${2@Q}."
+      exit 3
+      ;;
+  esac
+done
 
 echo "Done."

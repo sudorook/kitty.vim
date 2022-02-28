@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.24.2
+" Version: 0.24.3
 
 syn match kittySt '.*$' contains=kittyNumber,kittyColor
 syn match kittyColor '#\x\{3,8}' contained
@@ -95,12 +95,13 @@ syn keyword kittyKeyword contained
   \ inactive_tab_font_style inactive_tab_foreground inactive_text_alpha
   \ initial_window_height initial_window_width input_delay italic_font
   \ kitten_alias kitty_mod linux_display_server listen_on
-  \ macos_custom_beam_cursor macos_hide_from_tasks macos_option_as_alt
+  \ macos_custom_beam_cursor macos_hide_from_tasks
+  \ macos_menubar_title_max_length macos_option_as_alt
   \ macos_quit_when_last_window_closed macos_show_window_title_in
   \ macos_thicken_font macos_titlebar_color macos_traditional_fullscreen
   \ macos_window_resizable map mark1_background mark1_foreground
   \ mark2_background mark2_foreground mark3_background mark3_foreground
-  \ mouse_hide_wait mouse_map open_url_with placement_strategy
+  \ mouse_hide_wait mouse_map narrow_symbols open_url_with placement_strategy
   \ pointer_shape_when_dragging pointer_shape_when_grabbed
   \ remember_window_size repaint_delay resize_debounce_time
   \ resize_draw_strategy resize_in_steps scrollback_fill_enlarged_window
@@ -114,36 +115,37 @@ syn keyword kittyKeyword contained
   \ tab_title_template term touch_scroll_multiplier update_check_interval
   \ url_color url_excluded_characters url_prefixes url_style visual_bell_color
   \ visual_bell_duration visual_window_select_characters watcher
-  \ wayland_titlebar_color wheel_scroll_multiplier window_alert_on_bell
-  \ window_border_width window_logo_alpha window_logo_path
-  \ window_logo_position window_margin_width window_padding_width
-  \ window_resize_step_cells window_resize_step_lines
+  \ wayland_titlebar_color wheel_scroll_min_lines wheel_scroll_multiplier
+  \ window_alert_on_bell window_border_width window_logo_alpha
+  \ window_logo_path window_logo_position window_margin_width
+  \ window_padding_width window_resize_step_cells window_resize_step_lines
 
 syn keyword kittyAction contained
   \ change_font_size clear_selection clear_terminal click close_os_window
   \ close_other_windows_in_tab close_tab close_window
   \ close_window_with_confirmation combine copy_and_clear_or_interrupt
-  \ copy_or_interrupt copy_to_buffer copy_to_clipboard create_marker
-  \ debug_config detach_tab detach_window disable_ligatures_in discard_event
-  \ dump_lines_with_attrs edit_config_file eighth_window fifth_window
-  \ first_window focus_visible_window fourth_window goto_layout goto_tab
-  \ input_unicode_character kitten kitty_shell last_used_layout launch
-  \ layout_action load_config_file mouse_click_url mouse_click_url_or_select
-  \ mouse_handle_click mouse_select_command_output mouse_selection
-  \ mouse_show_command_output move_tab_backward move_tab_forward move_window
-  \ move_window_backward move_window_forward move_window_to_top
-  \ neighboring_window new_os_window new_os_window_with_cwd new_tab
-  \ new_tab_with_cwd new_window new_window_with_cwd next_layout next_tab
-  \ next_window ninth_window no_op nth_os_window nth_window
+  \ copy_ansi_to_clipboard copy_or_interrupt copy_to_buffer copy_to_clipboard
+  \ create_marker debug_config detach_tab detach_window disable_ligatures_in
+  \ discard_event dump_lines_with_attrs edit_config_file eighth_window
+  \ fifth_window first_window focus_visible_window fourth_window goto_layout
+  \ goto_tab input_unicode_character kitten kitty_shell last_used_layout
+  \ launch layout_action load_config_file mouse_click_url
+  \ mouse_click_url_or_select mouse_handle_click mouse_select_command_output
+  \ mouse_selection mouse_show_command_output move_tab_backward
+  \ move_tab_forward move_window move_window_backward move_window_forward
+  \ move_window_to_top neighboring_window new_os_window new_os_window_with_cwd
+  \ new_tab new_tab_with_cwd new_window new_window_with_cwd next_layout
+  \ next_tab next_window ninth_window no_op nth_os_window nth_window
   \ open_url_with_hints pass_selection_to_program paste paste_from_buffer
   \ paste_from_clipboard paste_from_selection paste_selection
   \ paste_selection_or_clipboard previous_tab previous_window quit
   \ remote_control remove_marker reset_window_sizes resize_window scroll_end
   \ scroll_home scroll_line_down scroll_line_up scroll_page_down
-  \ scroll_page_up scroll_to_mark scroll_to_prompt second_window select_tab
-  \ send_text set_background_opacity set_colors set_tab_title seventh_window
-  \ show_first_command_output_on_screen show_kitty_env_vars
-  \ show_last_command_output show_last_visited_command_output show_scrollback
-  \ signal_child sixth_window start_resizing_window swap_with_window
-  \ tenth_window third_window toggle_fullscreen toggle_layout
-  \ toggle_macos_secure_keyboard_entry toggle_marker toggle_maximized
+  \ scroll_page_up scroll_prompt_to_bottom scroll_to_mark scroll_to_prompt
+  \ second_window select_tab send_text set_background_opacity set_colors
+  \ set_tab_title seventh_window show_first_command_output_on_screen
+  \ show_kitty_env_vars show_last_command_output
+  \ show_last_visited_command_output show_scrollback signal_child sixth_window
+  \ start_resizing_window swap_with_window tenth_window third_window
+  \ toggle_fullscreen toggle_layout toggle_macos_secure_keyboard_entry
+  \ toggle_marker toggle_maximized

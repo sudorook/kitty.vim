@@ -10,7 +10,6 @@
 
 import sys
 import os
-import re
 import textwrap as tw
 from kitty.actions import get_all_actions
 from kitty.config import option_names_for_completion
@@ -82,16 +81,17 @@ if __name__ == "__main__":
 
     with open(INFILE, "r", encoding="utf-8") as f:
         TEXT = f.read()
-        TEXT = re.sub("@VERSION@", KITTY_VERSION, TEXT)
-        TEXT = (
-            TEXT
-            + "\n"
-            + KITTY_MODS
-            + "\n\n"
-            + KITTY_KEYWORDS
-            + "\n\n"
-            + KITTY_ACTIONS
-        )
+
+    TEXT = TEXT.replace("@VERSION@", KITTY_VERSION)
+    TEXT = (
+        TEXT
+        + "\n"
+        + KITTY_MODS
+        + "\n\n"
+        + KITTY_KEYWORDS
+        + "\n\n"
+        + KITTY_ACTIONS
+    )
 
     with open(OUTFILE, "w", encoding="utf-8") as f:
         f.writelines(TEXT)

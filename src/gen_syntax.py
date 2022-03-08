@@ -31,7 +31,7 @@ if __name__ == "__main__":
         sys.exit(3)
 
     # Instantiate text wrapper object.
-    wrapper = tw.TextWrapper(
+    WRAPPER = tw.TextWrapper(
         initial_indent="  \\ ", subsequent_indent="  \\ ", width=78
     )
 
@@ -72,19 +72,19 @@ if __name__ == "__main__":
     )
 
     # Generate text blocks to write to file.
-    KITTY_MODS = "syn keyword kittyMod contained\n" + wrapper.fill(ALL_MODS)
-    KITTY_KEYWORDS = "syn keyword kittyKeyword contained\n" + wrapper.fill(
+    KITTY_MODS = "syn keyword kittyMod contained\n" + WRAPPER.fill(ALL_MODS)
+    KITTY_KEYWORDS = "syn keyword kittyKeyword contained\n" + WRAPPER.fill(
         ALL_OPTIONS
     )
-    KITTY_ACTIONS = "syn keyword kittyAction contained\n" + wrapper.fill(
+    KITTY_ACTIONS = "syn keyword kittyAction contained\n" + WRAPPER.fill(
         ALL_ACTIONS
     )
 
     with open(INFILE, "r", encoding="utf-8") as f:
-        infile = f.read()
-        infile = re.sub("@VERSION@", KITTY_VERSION, infile)
-        updated_text = (
-            infile
+        TEXT = f.read()
+        TEXT = re.sub("@VERSION@", KITTY_VERSION, TEXT)
+        TEXT = (
+            TEXT
             + "\n"
             + KITTY_MODS
             + "\n\n"
@@ -94,4 +94,4 @@ if __name__ == "__main__":
         )
 
     with open(OUTFILE, "w", encoding="utf-8") as f:
-        f.writelines(updated_text)
+        f.writelines(TEXT)

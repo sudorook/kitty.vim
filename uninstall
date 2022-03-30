@@ -75,7 +75,7 @@ while [ ${#} -ge 1 ]; do
       break
       ;;
     *)
-      echo "ERROR: invalid flag ${2@Q}."
+      echo "ERROR: invalid flag ${1@Q}."
       exit 3
       ;;
   esac

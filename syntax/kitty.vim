@@ -3,9 +3,10 @@
 " Version: 0.24.4
 
 syn match kittySt '.*$' contains=kittyNumber,kittyColor
-syn match kittyColor '#\x\{3,8}' contained
-syn match kittyNumber '\s[+-]\?\d\+\.\?\d*\(%\|px\|pt\|em\)\?'ms=s+1 contained contains=kittyUnit
-syn match kittyUnit '\(px\|pt\|em\)' contained
+syn match kittyColor '\<\?#\(\x\{8}\|\x\{6}\|\x\{3}\)\>' contained contains=kittyNumber
+syn match kittyNumber '[+-]\?\.\?\<\d*\.\?\d*\(px\|pt\|em\|c\|%\)\?\>' contained contains=kittyUnit
+syn match kittyNumber '\(0x\|U+\)\x\+' contained
+syn match kittyUnit '\(px\|pt\|em\|c\|%\)' contained
 
 " match keywords only at the start of the line
 syn match kittyKW '^\S*' contains=kittyKeyword,kittyInvalidKeyword nextgroup=kittySt

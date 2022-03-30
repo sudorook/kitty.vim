@@ -5,12 +5,12 @@ DIR="$(dirname "$0")"
 
 function install_vim {
   mkdir -p "${HOME}/.vim"
-  cp -raf "${DIR}/ftdetect" "${DIR}/ftplugin" "${DIR}/syntax" "${HOME}/.vim/"
+  cp -rafv "${DIR}"/{ftdetect,ftplugin,syntax} "${HOME}"/.vim/
 }
 
 function install_neovim {
   mkdir -p "${HOME}/.config/nvim"
-  cp -raf "${DIR}/ftdetect" "${DIR}/ftplugin" "${DIR}/syntax" "${HOME}/.config/nvim/"
+  cp -rafv "${DIR}"/{ftdetect,ftplugin,syntax} "${HOME}"/.config/nvim/
 }
 
 function print_usage {

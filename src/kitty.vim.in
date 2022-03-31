@@ -4,7 +4,7 @@
 
 syn match kittySt '.*$' contains=kittyNumber,kittyColor
 syn match kittyColor '\<\?#\(\x\{8}\|\x\{6}\|\x\{3}\)\>' contained contains=kittyNumber
-syn match kittyNumber '[+-]\?\.\?\<\d*\.\?\d*\(px\|pt\|em\|c\|%\)\?\>' contained contains=kittyUnit
+syn match kittyNumber '[+-]\?\.\?\<\(\d\+\.\?\|\.\d\+\)\(px\|pt\|em\|c\|%\)\?\>' contained contains=kittyUnit
 syn match kittyNumber '\(0x\|U+\)\x\+' contained
 syn match kittyUnit '\(px\|pt\|em\|c\|%\)' contained
 

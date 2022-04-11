@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.24.4
+" Version: 0.25.0
 
 syn match kittySt '.*$' contains=kittyNumber,kittyColor
 syn match kittyColor '\<\?#\(\x\{8}\|\x\{6}\|\x\{3}\)\>' contained contains=kittyNumber
@@ -102,8 +102,8 @@ syn keyword kittyKeyword contained
   \ macos_thicken_font macos_titlebar_color macos_traditional_fullscreen
   \ macos_window_resizable map mark1_background mark1_foreground
   \ mark2_background mark2_foreground mark3_background mark3_foreground
-  \ mouse_hide_wait mouse_map narrow_symbols open_url_with placement_strategy
-  \ pointer_shape_when_dragging pointer_shape_when_grabbed
+  \ mouse_hide_wait mouse_map narrow_symbols open_url_with paste_actions
+  \ placement_strategy pointer_shape_when_dragging pointer_shape_when_grabbed
   \ remember_window_size repaint_delay resize_debounce_time
   \ resize_draw_strategy resize_in_steps scrollback_fill_enlarged_window
   \ scrollback_lines scrollback_pager scrollback_pager_history_size
@@ -123,7 +123,8 @@ syn keyword kittyKeyword contained
 
 syn keyword kittyAction contained
   \ change_font_size clear_selection clear_terminal click close_os_window
-  \ close_other_windows_in_tab close_tab close_window
+  \ close_other_tabs_in_os_window close_other_windows_in_tab
+  \ close_shared_ssh_connections close_tab close_window
   \ close_window_with_confirmation combine copy_and_clear_or_interrupt
   \ copy_ansi_to_clipboard copy_or_interrupt copy_to_buffer copy_to_clipboard
   \ create_marker debug_config detach_tab detach_window disable_ligatures_in
@@ -142,11 +143,11 @@ syn keyword kittyAction contained
   \ paste_selection_or_clipboard previous_tab previous_window quit
   \ remote_control remove_marker reset_window_sizes resize_window scroll_end
   \ scroll_home scroll_line_down scroll_line_up scroll_page_down
-  \ scroll_page_up scroll_prompt_to_bottom scroll_to_mark scroll_to_prompt
-  \ second_window select_tab send_text set_background_opacity set_colors
-  \ set_tab_title seventh_window show_first_command_output_on_screen
-  \ show_kitty_env_vars show_last_command_output
-  \ show_last_visited_command_output show_scrollback signal_child sixth_window
-  \ start_resizing_window swap_with_window tenth_window third_window
-  \ toggle_fullscreen toggle_layout toggle_macos_secure_keyboard_entry
-  \ toggle_marker toggle_maximized
+  \ scroll_page_up scroll_prompt_to_bottom scroll_prompt_to_top scroll_to_mark
+  \ scroll_to_prompt second_window select_tab send_text set_background_opacity
+  \ set_colors set_tab_title seventh_window
+  \ show_first_command_output_on_screen show_kitty_env_vars
+  \ show_last_command_output show_last_visited_command_output show_scrollback
+  \ signal_child sixth_window start_resizing_window swap_with_window
+  \ tenth_window third_window toggle_fullscreen toggle_layout
+  \ toggle_macos_secure_keyboard_entry toggle_marker toggle_maximized

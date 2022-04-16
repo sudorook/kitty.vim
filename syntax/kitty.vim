@@ -2,22 +2,22 @@
 " Language: Kitty
 " Version: 0.25.0
 
-syn match kittySt '.*$' contains=kittyNumber,kittyColor
+syn match kittySt '.*$' contains=kittyNumber,kittyColor,kittyString
 syn match kittyColor '\<\?#\(\x\{8}\|\x\{6}\|\x\{3}\)\>' contained contains=kittyNumber
 syn match kittyNumber '[+-]\?\.\?\<\(\d\+\.\?\|\.\d\+\)\(px\|pt\|em\|c\|%\)\?\>' contained contains=kittyUnit
 syn match kittyNumber '\(0x\|U+\)\x\+' contained
 syn match kittyUnit '\(px\|pt\|em\|c\|%\)' contained
+syn region kittyString start=+"+ skip=+\\\\\|\\"+ end=+"+ oneline contained
+syn region kittyString start=+'+ skip=+\\\\\|\\'+ end=+'+ oneline contained
 
-" match keywords only at the start of the line
-syn match kittyKW '^\S*' contains=kittyKeyword,kittyInvalidKeyword nextgroup=kittySt
+" match keywords
+syn match kittyKW '^\s*\S*' contains=kittyKeyword,kittyInvalidKeyword nextgroup=kittySt
 syn match kittyComment /^\s*#.*$/ contains=kittyTodo
-syn region kittyString start=+"+ skip=+\\\\\|\\"+ end=+"+ oneline
-syn region kittyString start=+'+ skip=+\\\\\|\\'+ end=+'+ oneline
-syn keyword kittyTodo contained TODO FIXME XXX contained
-syn match kittyInclude /^include/ display
+syn keyword kittyTodo contained TODO FIXME XXX
+syn match kittyInclude /^\s*include/ display
 
 " match map and mouse_map to highlight bindable actions
-syn match kittyMap '^\(mouse_\)\?map' nextgroup=kittyKeybind
+syn match kittyMap '^\s*\(mouse_\)\?map' nextgroup=kittyKeybind
 syn match kittyInvalidKeyword '\S*' contained
 
 syn region kittyKeybind start='\s' end='\s' contains=kittyMod contained nextgroup=kittyActionKW

@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.25.2
+" Version: 0.26.0
 
 syn match kittySt '.*$' contains=kittyNumber,kittyColor,kittyString
 syn match kittyColor '\<\?#\(\x\{8}\|\x\{6}\|\x\{3}\)\>' contained contains=kittyNumber
@@ -48,11 +48,10 @@ syn keyword kittyMod contained
 syn keyword kittyKeyword contained
   \ action_alias active_border_color active_tab_background
   \ active_tab_font_style active_tab_foreground active_tab_title_template
-  \ adjust_baseline adjust_column_width adjust_line_height allow_cloning
-  \ allow_hyperlinks allow_remote_control background background_image
-  \ background_image_layout background_image_linear background_opacity
-  \ background_tint bell_border_color bell_on_tab bell_path bold_font
-  \ bold_italic_font box_drawing_scale clear_all_mouse_actions
+  \ allow_cloning allow_hyperlinks allow_remote_control background
+  \ background_image background_image_layout background_image_linear
+  \ background_opacity background_tint bell_border_color bell_on_tab bell_path
+  \ bold_font bold_italic_font box_drawing_scale clear_all_mouse_actions
   \ clear_all_shortcuts click_interval clipboard_control clipboard_max_size
   \ clone_source_strategies close_on_child_death color0 color1 color2 color3
   \ color4 color5 color6 color7 color8 color9 color10 color11 color12 color13
@@ -102,25 +101,26 @@ syn keyword kittyKeyword contained
   \ macos_thicken_font macos_titlebar_color macos_traditional_fullscreen
   \ macos_window_resizable map mark1_background mark1_foreground
   \ mark2_background mark2_foreground mark3_background mark3_foreground
-  \ mouse_hide_wait mouse_map narrow_symbols open_url_with paste_actions
-  \ placement_strategy pointer_shape_when_dragging pointer_shape_when_grabbed
-  \ remember_window_size repaint_delay resize_debounce_time
-  \ resize_draw_strategy resize_in_steps scrollback_fill_enlarged_window
-  \ scrollback_lines scrollback_pager scrollback_pager_history_size
-  \ select_by_word_characters select_by_word_characters_forward
-  \ selection_background selection_foreground shell shell_integration
-  \ single_window_margin_width startup_session strip_trailing_spaces
-  \ symbol_map sync_to_monitor tab_activity_symbol tab_bar_align
-  \ tab_bar_background tab_bar_edge tab_bar_margin_color tab_bar_margin_height
-  \ tab_bar_margin_width tab_bar_min_tabs tab_bar_style tab_fade
-  \ tab_powerline_style tab_separator tab_switch_strategy tab_title_template
-  \ term touch_scroll_multiplier update_check_interval url_color
-  \ url_excluded_characters url_prefixes url_style visual_bell_color
-  \ visual_bell_duration visual_window_select_characters watcher
-  \ wayland_titlebar_color wheel_scroll_min_lines wheel_scroll_multiplier
-  \ window_alert_on_bell window_border_width window_logo_alpha
-  \ window_logo_path window_logo_position window_margin_width
-  \ window_padding_width window_resize_step_cells window_resize_step_lines
+  \ modify_font mouse_hide_wait mouse_map narrow_symbols open_url_with
+  \ paste_actions placement_strategy pointer_shape_when_dragging
+  \ pointer_shape_when_grabbed remember_window_size remote_control_password
+  \ repaint_delay resize_debounce_time resize_draw_strategy resize_in_steps
+  \ scrollback_fill_enlarged_window scrollback_lines scrollback_pager
+  \ scrollback_pager_history_size select_by_word_characters
+  \ select_by_word_characters_forward selection_background
+  \ selection_foreground shell shell_integration single_window_margin_width
+  \ startup_session strip_trailing_spaces symbol_map sync_to_monitor
+  \ tab_activity_symbol tab_bar_align tab_bar_background tab_bar_edge
+  \ tab_bar_margin_color tab_bar_margin_height tab_bar_margin_width
+  \ tab_bar_min_tabs tab_bar_style tab_fade tab_powerline_style tab_separator
+  \ tab_switch_strategy tab_title_template term touch_scroll_multiplier
+  \ update_check_interval url_color url_excluded_characters url_prefixes
+  \ url_style visual_bell_color visual_bell_duration
+  \ visual_window_select_characters watcher wayland_titlebar_color
+  \ wheel_scroll_min_lines wheel_scroll_multiplier window_alert_on_bell
+  \ window_border_width window_logo_alpha window_logo_path
+  \ window_logo_position window_margin_width window_padding_width
+  \ window_resize_step_cells window_resize_step_lines
 
 syn keyword kittyAction contained
   \ change_font_size clear_selection clear_terminal click close_os_window
@@ -147,7 +147,7 @@ syn keyword kittyAction contained
   \ scroll_page_up scroll_prompt_to_bottom scroll_prompt_to_top scroll_to_mark
   \ scroll_to_prompt second_window select_tab send_text set_background_opacity
   \ set_colors set_tab_title seventh_window
-  \ show_first_command_output_on_screen show_kitty_env_vars
+  \ show_first_command_output_on_screen show_kitty_doc show_kitty_env_vars
   \ show_last_command_output show_last_non_empty_command_output
   \ show_last_visited_command_output show_scrollback signal_child sixth_window
   \ start_resizing_window swap_with_window tenth_window third_window

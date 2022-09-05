@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.26.1
+" Version: 0.26.2
 
 syn match kittySt '.*$' contains=kittyNumber,kittyColor,kittyString
 syn match kittyColor '\<\?#\(\x\{8}\|\x\{6}\|\x\{3}\)\>' contained contains=kittyNumber

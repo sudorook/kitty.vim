@@ -34,10 +34,6 @@ if __name__ == "__main__":
         initial_indent="  \\ ", subsequent_indent="  \\ ", width=78
     )
 
-    # 'Click' keyword is missing from kitty actions list as of 0.24.0, so add
-    # it manually.
-    EXTRAS = {"click"}
-
     # Get all kitty actions and options and convert to list.
     ALL_MODS = " ".join(
         sorted(
@@ -57,7 +53,7 @@ if __name__ == "__main__":
                     a.name
                     for _, act_list in get_all_actions().items()
                     for a in act_list
-                }.union(EXTRAS)
+                }.union(utils.mouse_trigger_count_map.keys())
             )
         )
     )

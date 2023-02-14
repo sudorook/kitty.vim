@@ -131,10 +131,11 @@ syn keyword kittyAction contained
   \ close_window_with_confirmation combine copy_and_clear_or_interrupt
   \ copy_ansi_to_clipboard copy_or_interrupt copy_to_buffer copy_to_clipboard
   \ create_marker debug_config detach_tab detach_window disable_ligatures_in
-  \ discard_event dump_lines_with_attrs edit_config_file eighth_window
-  \ fifth_window first_window focus_visible_window fourth_window goto_layout
-  \ goto_tab hide_macos_app hide_macos_other_apps input_unicode_character
-  \ kitten kitty_shell last_used_layout launch layout_action load_config_file
+  \ discard_event doubleclick doublepress dump_lines_with_attrs
+  \ edit_config_file eighth_window fifth_window first_window
+  \ focus_visible_window fourth_window goto_layout goto_tab hide_macos_app
+  \ hide_macos_other_apps input_unicode_character kitten kitty_shell
+  \ last_used_layout launch layout_action load_config_file
   \ minimize_macos_window mouse_click_url mouse_click_url_or_select
   \ mouse_handle_click mouse_select_command_output mouse_selection
   \ mouse_show_command_output move_tab_backward move_tab_forward move_window
@@ -144,9 +145,9 @@ syn keyword kittyAction contained
   \ next_window ninth_window no_op nth_os_window nth_window open_url
   \ open_url_with_hints pass_selection_to_program paste paste_from_buffer
   \ paste_from_clipboard paste_from_selection paste_selection
-  \ paste_selection_or_clipboard previous_tab previous_window quit
-  \ remote_control remove_marker reset_window_sizes resize_window scroll_end
-  \ scroll_home scroll_line_down scroll_line_up scroll_page_down
+  \ paste_selection_or_clipboard press previous_tab previous_window quit
+  \ release remote_control remove_marker reset_window_sizes resize_window
+  \ scroll_end scroll_home scroll_line_down scroll_line_up scroll_page_down
   \ scroll_page_up scroll_prompt_to_bottom scroll_prompt_to_top scroll_to_mark
   \ scroll_to_prompt second_window select_tab send_text set_background_opacity
   \ set_colors set_tab_title seventh_window
@@ -155,4 +156,4 @@ syn keyword kittyAction contained
   \ show_last_visited_command_output show_scrollback signal_child sixth_window
   \ sleep start_resizing_window swap_with_window tenth_window third_window
   \ toggle_fullscreen toggle_layout toggle_macos_secure_keyboard_entry
-  \ toggle_marker toggle_maximized
+  \ toggle_marker toggle_maximized triplepress

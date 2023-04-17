@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.27.1
+" Version: 0.28.0
 
 syn match kittySt '.*$' contains=kittyNumber,kittyColor,kittyString
 syn match kittyColor '\<\?#\(\x\{8}\|\x\{6}\|\x\{3}\)\>' contained contains=kittyNumber
@@ -95,8 +95,8 @@ syn keyword kittyKeyword contained
   \ foreground hide_window_decorations inactive_border_color
   \ inactive_tab_background inactive_tab_font_style inactive_tab_foreground
   \ inactive_text_alpha initial_window_height initial_window_width input_delay
-  \ italic_font kitten_alias kitty_mod linux_display_server listen_on
-  \ macos_colorspace macos_custom_beam_cursor macos_hide_from_tasks
+  \ italic_font kitten_alias kitty_mod linux_bell_theme linux_display_server
+  \ listen_on macos_colorspace macos_custom_beam_cursor macos_hide_from_tasks
   \ macos_menubar_title_max_length macos_option_as_alt
   \ macos_quit_when_last_window_closed macos_show_window_title_in
   \ macos_thicken_font macos_titlebar_color macos_traditional_fullscreen
@@ -115,9 +115,9 @@ syn keyword kittyKeyword contained
   \ tab_bar_background tab_bar_edge tab_bar_margin_color tab_bar_margin_height
   \ tab_bar_margin_width tab_bar_min_tabs tab_bar_style tab_fade
   \ tab_powerline_style tab_separator tab_switch_strategy tab_title_max_length
-  \ tab_title_template term touch_scroll_multiplier undercurl_style
-  \ update_check_interval url_color url_excluded_characters url_prefixes
-  \ url_style visual_bell_color visual_bell_duration
+  \ tab_title_template term text_composition_strategy touch_scroll_multiplier
+  \ undercurl_style update_check_interval url_color url_excluded_characters
+  \ url_prefixes url_style visual_bell_color visual_bell_duration
   \ visual_window_select_characters watcher wayland_titlebar_color
   \ wheel_scroll_min_lines wheel_scroll_multiplier window_alert_on_bell
   \ window_border_width window_logo_alpha window_logo_path

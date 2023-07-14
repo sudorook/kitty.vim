@@ -21,12 +21,14 @@ if __name__ == "__main__":
     if os.path.exists(sys.argv[1]):
         INFILE = sys.argv[1]
     else:
-        sys.err("Input '" + sys.arv[1] + "' does not exist. Exiting.")
+        sys.stderr.write(
+            "Input '" + sys.argv[1] + "' does not exist. Exiting."
+        )
         sys.exit(3)
     if sys.argv[2]:
         OUTFILE = sys.argv[2]
     else:
-        sys.err("No output file given. Exiting.")
+        sys.stderr.write("No output file given. Exiting.")
         sys.exit(3)
 
     # Instantiate text wrapper object.

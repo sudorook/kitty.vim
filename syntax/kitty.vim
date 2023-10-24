@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.29.2
+" Version: 0.30.0
 
 syn match kittySt '.*$' contains=kittyNumber,kittyColor,kittyString
 syn match kittyColor '\<\?#\(\x\{8}\|\x\{6}\|\x\{3}\)\>' contained contains=kittyNumber
@@ -92,7 +92,7 @@ syn keyword kittyKeyword contained
   \ draw_minimal_borders dynamic_background_opacity editor enable_audio_bell
   \ enabled_layouts env exe_search_path file_transfer_confirmation_bypass
   \ focus_follows_mouse font_family font_features font_size force_ltr
-  \ foreground hide_window_decorations inactive_border_color
+  \ foreground forward_stdio hide_window_decorations inactive_border_color
   \ inactive_tab_background inactive_tab_font_style inactive_tab_foreground
   \ inactive_text_alpha initial_window_height initial_window_width input_delay
   \ italic_font kitten_alias kitty_mod linux_bell_theme linux_display_server

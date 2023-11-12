@@ -89,6 +89,7 @@ if __name__ == "__main__":
         + KITTY_KEYWORDS
         + "\n\n"
         + KITTY_ACTIONS
+        + "\n"
     )
 
     with open(OUTFILE, "w", encoding="utf-8") as f:

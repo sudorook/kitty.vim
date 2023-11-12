@@ -14,10 +14,12 @@ function install_neovim {
 }
 
 function print_usage {
-  echo "./install usage:"
-  echo "  -v|--vim         install Vim files"
-  echo "  -n|--neovim      install Neovim files"
-  echo "  -h|--help        print this message"
+  cat << EOF
+./install usage:
+  -v|--vim         install Vim files
+  -n|--neovim      install Neovim files
+  -h|--help        print this message
+EOF
 }
 
 OPTIONS=vnh

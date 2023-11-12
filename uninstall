@@ -40,10 +40,12 @@ function uninstall_neovim {
 }
 
 function print_usage {
-  echo "./uninstall usage:"
-  echo "  -v|--vim         uninstall Vim files"
-  echo "  -n|--neovim      uninstall Neovim files"
-  echo "  -h|--help        print this message"
+  cat << EOF
+./uninstall usage:
+  -v|--vim         uninstall Vim files
+  -n|--neovim      uninstall Neovim files
+  -h|--help        print this message
+EOF
 }
 
 OPTIONS=vnh

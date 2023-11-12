@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.30.1
+" Version: 0.31.0
 
 syn match kittySt '.*$' contains=kittyNumber,kittyColor,kittyString
 syn match kittyColor '\<\?#\(\x\{8}\|\x\{6}\|\x\{3}\)\>' contained contains=kittyNumber
@@ -102,28 +102,28 @@ syn keyword kittyKeyword contained
   \ macos_thicken_font macos_titlebar_color macos_traditional_fullscreen
   \ macos_window_resizable map mark1_background mark1_foreground
   \ mark2_background mark2_foreground mark3_background mark3_foreground
-  \ modify_font mouse_hide_wait mouse_map narrow_symbols open_url_with
-  \ paste_actions placement_strategy pointer_shape_when_dragging
+  \ menu_map modify_font mouse_hide_wait mouse_map narrow_symbols
+  \ open_url_with paste_actions placement_strategy pointer_shape_when_dragging
   \ pointer_shape_when_grabbed remember_window_size remote_control_password
   \ repaint_delay resize_debounce_time resize_in_steps
   \ scrollback_fill_enlarged_window scrollback_lines scrollback_pager
   \ scrollback_pager_history_size select_by_word_characters
   \ select_by_word_characters_forward selection_background
   \ selection_foreground shell shell_integration show_hyperlink_targets
-  \ single_window_margin_width startup_session strip_trailing_spaces
-  \ symbol_map sync_to_monitor tab_activity_symbol tab_bar_align
-  \ tab_bar_background tab_bar_edge tab_bar_margin_color tab_bar_margin_height
-  \ tab_bar_margin_width tab_bar_min_tabs tab_bar_style tab_fade
-  \ tab_powerline_style tab_separator tab_switch_strategy tab_title_max_length
-  \ tab_title_template term text_composition_strategy
+  \ single_window_margin_width single_window_padding_width startup_session
+  \ strip_trailing_spaces symbol_map sync_to_monitor tab_activity_symbol
+  \ tab_bar_align tab_bar_background tab_bar_edge tab_bar_margin_color
+  \ tab_bar_margin_height tab_bar_margin_width tab_bar_min_tabs tab_bar_style
+  \ tab_fade tab_powerline_style tab_separator tab_switch_strategy
+  \ tab_title_max_length tab_title_template term text_composition_strategy
   \ text_fg_override_threshold touch_scroll_multiplier undercurl_style
-  \ update_check_interval url_color url_excluded_characters url_prefixes
-  \ url_style visual_bell_color visual_bell_duration
-  \ visual_window_select_characters watcher wayland_titlebar_color
-  \ wheel_scroll_min_lines wheel_scroll_multiplier window_alert_on_bell
-  \ window_border_width window_logo_alpha window_logo_path
-  \ window_logo_position window_margin_width window_padding_width
-  \ window_resize_step_cells window_resize_step_lines
+  \ underline_hyperlinks update_check_interval url_color
+  \ url_excluded_characters url_prefixes url_style visual_bell_color
+  \ visual_bell_duration visual_window_select_characters watcher
+  \ wayland_titlebar_color wheel_scroll_min_lines wheel_scroll_multiplier
+  \ window_alert_on_bell window_border_width window_logo_alpha
+  \ window_logo_path window_logo_position window_margin_width
+  \ window_padding_width window_resize_step_cells window_resize_step_lines
 
 syn keyword kittyAction contained
   \ change_font_size clear_selection clear_terminal click close_os_window
@@ -147,14 +147,15 @@ syn keyword kittyAction contained
   \ open_url_with_hints pass_selection_to_program paste paste_from_buffer
   \ paste_from_clipboard paste_from_selection paste_selection
   \ paste_selection_or_clipboard press previous_tab previous_window quit
-  \ release remote_control remove_marker reset_window_sizes resize_window
-  \ scroll_end scroll_home scroll_line_down scroll_line_up scroll_page_down
-  \ scroll_page_up scroll_prompt_to_bottom scroll_prompt_to_top scroll_to_mark
-  \ scroll_to_prompt second_window select_tab send_text set_background_opacity
-  \ set_colors set_tab_title seventh_window
-  \ show_first_command_output_on_screen show_kitty_doc show_kitty_env_vars
-  \ show_last_command_output show_last_non_empty_command_output
-  \ show_last_visited_command_output show_scrollback signal_child sixth_window
-  \ sleep start_resizing_window swap_with_window tenth_window third_window
-  \ toggle_fullscreen toggle_layout toggle_macos_secure_keyboard_entry
-  \ toggle_marker toggle_maximized triplepress
+  \ release remote_control remote_control_script remove_marker
+  \ reset_window_sizes resize_window scroll_end scroll_home scroll_line_down
+  \ scroll_line_up scroll_page_down scroll_page_up scroll_prompt_to_bottom
+  \ scroll_prompt_to_top scroll_to_mark scroll_to_prompt second_window
+  \ select_tab send_text set_background_opacity set_colors set_tab_title
+  \ set_window_title seventh_window show_first_command_output_on_screen
+  \ show_kitty_doc show_kitty_env_vars show_last_command_output
+  \ show_last_non_empty_command_output show_last_visited_command_output
+  \ show_scrollback signal_child sixth_window sleep start_resizing_window
+  \ swap_with_window tenth_window third_window toggle_fullscreen toggle_layout
+  \ toggle_macos_secure_keyboard_entry toggle_marker toggle_maximized
+  \ triplepress

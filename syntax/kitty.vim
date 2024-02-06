@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.31.0
+" Version: 0.32.0
 
 syn match kittySt '.*$' contains=kittyNumber,kittyColor,kittyString
 syn match kittyColor '\<\?#\(\x\{8}\|\x\{6}\|\x\{3}\)\>' contained contains=kittyNumber
@@ -103,19 +103,20 @@ syn keyword kittyKeyword contained
   \ macos_window_resizable map mark1_background mark1_foreground
   \ mark2_background mark2_foreground mark3_background mark3_foreground
   \ menu_map modify_font mouse_hide_wait mouse_map narrow_symbols
-  \ open_url_with paste_actions placement_strategy pointer_shape_when_dragging
-  \ pointer_shape_when_grabbed remember_window_size remote_control_password
-  \ repaint_delay resize_debounce_time resize_in_steps
-  \ scrollback_fill_enlarged_window scrollback_lines scrollback_pager
-  \ scrollback_pager_history_size select_by_word_characters
-  \ select_by_word_characters_forward selection_background
-  \ selection_foreground shell shell_integration show_hyperlink_targets
-  \ single_window_margin_width single_window_padding_width startup_session
-  \ strip_trailing_spaces symbol_map sync_to_monitor tab_activity_symbol
-  \ tab_bar_align tab_bar_background tab_bar_edge tab_bar_margin_color
-  \ tab_bar_margin_height tab_bar_margin_width tab_bar_min_tabs tab_bar_style
-  \ tab_fade tab_powerline_style tab_separator tab_switch_strategy
-  \ tab_title_max_length tab_title_template term text_composition_strategy
+  \ notify_on_cmd_finish open_url_with paste_actions placement_strategy
+  \ pointer_shape_when_dragging pointer_shape_when_grabbed
+  \ remember_window_size remote_control_password repaint_delay
+  \ resize_debounce_time resize_in_steps scrollback_fill_enlarged_window
+  \ scrollback_lines scrollback_pager scrollback_pager_history_size
+  \ select_by_word_characters select_by_word_characters_forward
+  \ selection_background selection_foreground shell shell_integration
+  \ show_hyperlink_targets single_window_margin_width
+  \ single_window_padding_width startup_session strip_trailing_spaces
+  \ symbol_map sync_to_monitor tab_activity_symbol tab_bar_align
+  \ tab_bar_background tab_bar_edge tab_bar_margin_color tab_bar_margin_height
+  \ tab_bar_margin_width tab_bar_min_tabs tab_bar_style tab_fade
+  \ tab_powerline_style tab_separator tab_switch_strategy tab_title_max_length
+  \ tab_title_template term text_composition_strategy
   \ text_fg_override_threshold touch_scroll_multiplier undercurl_style
   \ underline_hyperlinks update_check_interval url_color
   \ url_excluded_characters url_prefixes url_style visual_bell_color
@@ -146,13 +147,14 @@ syn keyword kittyAction contained
   \ next_window ninth_window no_op nth_os_window nth_window open_url
   \ open_url_with_hints pass_selection_to_program paste paste_from_buffer
   \ paste_from_clipboard paste_from_selection paste_selection
-  \ paste_selection_or_clipboard press previous_tab previous_window quit
-  \ release remote_control remote_control_script remove_marker
-  \ reset_window_sizes resize_window scroll_end scroll_home scroll_line_down
-  \ scroll_line_up scroll_page_down scroll_page_up scroll_prompt_to_bottom
-  \ scroll_prompt_to_top scroll_to_mark scroll_to_prompt second_window
-  \ select_tab send_text set_background_opacity set_colors set_tab_title
-  \ set_window_title seventh_window show_first_command_output_on_screen
+  \ paste_selection_or_clipboard pop_keyboard_mode press previous_tab
+  \ previous_window push_keyboard_mode quit release remote_control
+  \ remote_control_script remove_marker reset_window_sizes resize_window
+  \ scroll_end scroll_home scroll_line_down scroll_line_up scroll_page_down
+  \ scroll_page_up scroll_prompt_to_bottom scroll_prompt_to_top scroll_to_mark
+  \ scroll_to_prompt second_window select_tab send_key send_text
+  \ set_background_opacity set_colors set_tab_title set_window_title
+  \ seventh_window show_error show_first_command_output_on_screen
   \ show_kitty_doc show_kitty_env_vars show_last_command_output
   \ show_last_non_empty_command_output show_last_visited_command_output
   \ show_scrollback signal_child sixth_window sleep start_resizing_window

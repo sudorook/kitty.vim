@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.32.1
+" Version: 0.32.2
 
 syn match kittySt '.*$' contains=kittyNumber,kittyColor,kittyString
 syn match kittyColor '\<\?#\(\x\{8}\|\x\{6}\|\x\{3}\)\>' contained contains=kittyNumber
@@ -128,16 +128,16 @@ syn keyword kittyKeyword contained
 
 syn keyword kittyAction contained
   \ change_font_size clear_selection clear_terminal click close_os_window
-  \ close_other_tabs_in_os_window close_other_windows_in_tab
-  \ close_shared_ssh_connections close_tab close_window
-  \ close_window_with_confirmation combine copy_and_clear_or_interrupt
-  \ copy_ansi_to_clipboard copy_or_interrupt copy_to_buffer copy_to_clipboard
-  \ create_marker debug_config detach_tab detach_window disable_ligatures_in
-  \ discard_event doubleclick doublepress dump_lines_with_attrs
-  \ edit_config_file eighth_window fifth_window first_window
-  \ focus_visible_window fourth_window goto_layout goto_tab hide_macos_app
-  \ hide_macos_other_apps input_unicode_character kitten kitty_shell
-  \ last_used_layout launch layout_action load_config_file
+  \ close_other_os_windows close_other_tabs_in_os_window
+  \ close_other_windows_in_tab close_shared_ssh_connections close_tab
+  \ close_window close_window_with_confirmation combine
+  \ copy_and_clear_or_interrupt copy_ansi_to_clipboard copy_or_interrupt
+  \ copy_to_buffer copy_to_clipboard create_marker debug_config detach_tab
+  \ detach_window disable_ligatures_in discard_event doubleclick doublepress
+  \ dump_lines_with_attrs edit_config_file eighth_window fifth_window
+  \ first_window focus_visible_window fourth_window goto_layout goto_tab
+  \ hide_macos_app hide_macos_other_apps input_unicode_character kitten
+  \ kitty_shell last_used_layout launch layout_action load_config_file
   \ minimize_macos_window mouse_click_url mouse_click_url_or_select
   \ mouse_handle_click mouse_select_command_output mouse_selection
   \ mouse_show_command_output move_tab_backward move_tab_forward move_window

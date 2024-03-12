@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.32.2
+" Version: 0.33.0
 
 syn match kittySt '.*$' contains=kittyNumber,kittyColor,kittyString
 syn match kittyColor '\<\?#\(\x\{8}\|\x\{6}\|\x\{3}\)\>' contained contains=kittyNumber
@@ -160,4 +160,4 @@ syn keyword kittyAction contained
   \ show_scrollback signal_child sixth_window sleep start_resizing_window
   \ swap_with_window tenth_window third_window toggle_fullscreen toggle_layout
   \ toggle_macos_secure_keyboard_entry toggle_marker toggle_maximized
-  \ triplepress
+  \ toggle_tab triplepress

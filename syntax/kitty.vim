@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.35.2
+" Version: 0.36.0
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "
@@ -108,8 +108,8 @@ syn keyword kittyKeyword contained
   \ cursor_underline_thickness default_pointer_shape detect_urls dim_opacity
   \ disable_ligatures draw_minimal_borders dynamic_background_opacity editor
   \ enable_audio_bell enabled_layouts env exe_search_path
-  \ file_transfer_confirmation_bypass focus_follows_mouse font_family
-  \ font_features font_size force_ltr foreground forward_stdio
+  \ file_transfer_confirmation_bypass filter_notification focus_follows_mouse
+  \ font_family font_features font_size force_ltr foreground forward_stdio
   \ hide_window_decorations inactive_border_color inactive_tab_background
   \ inactive_tab_font_style inactive_tab_foreground inactive_text_alpha
   \ initial_window_height initial_window_width input_delay italic_font
@@ -126,23 +126,23 @@ syn keyword kittyKeyword contained
   \ remember_window_size remote_control_password repaint_delay
   \ resize_debounce_time resize_in_steps scrollback_fill_enlarged_window
   \ scrollback_indicator_opacity scrollback_lines scrollback_pager
-  \ scrollback_pager_history_size select_by_word_characters
-  \ select_by_word_characters_forward selection_background
-  \ selection_foreground shell shell_integration show_hyperlink_targets
-  \ single_window_margin_width single_window_padding_width startup_session
-  \ strip_trailing_spaces symbol_map sync_to_monitor tab_activity_symbol
-  \ tab_bar_align tab_bar_background tab_bar_edge tab_bar_margin_color
-  \ tab_bar_margin_height tab_bar_margin_width tab_bar_min_tabs tab_bar_style
-  \ tab_fade tab_powerline_style tab_separator tab_switch_strategy
-  \ tab_title_max_length tab_title_template term terminfo_type
-  \ text_composition_strategy text_fg_override_threshold
-  \ touch_scroll_multiplier undercurl_style underline_hyperlinks
-  \ update_check_interval url_color url_excluded_characters url_prefixes
-  \ url_style visual_bell_color visual_bell_duration
-  \ visual_window_select_characters watcher wayland_enable_ime
-  \ wayland_titlebar_color wheel_scroll_min_lines wheel_scroll_multiplier
-  \ window_alert_on_bell window_border_width window_logo_alpha
-  \ window_logo_path window_logo_position window_logo_scale
+  \ scrollback_pager_history_size second_transparent_bg
+  \ select_by_word_characters select_by_word_characters_forward
+  \ selection_background selection_foreground shell shell_integration
+  \ show_hyperlink_targets single_window_margin_width
+  \ single_window_padding_width startup_session strip_trailing_spaces
+  \ symbol_map sync_to_monitor tab_activity_symbol tab_bar_align
+  \ tab_bar_background tab_bar_edge tab_bar_margin_color tab_bar_margin_height
+  \ tab_bar_margin_width tab_bar_min_tabs tab_bar_style tab_fade
+  \ tab_powerline_style tab_separator tab_switch_strategy tab_title_max_length
+  \ tab_title_template term terminfo_type text_composition_strategy
+  \ text_fg_override_threshold touch_scroll_multiplier undercurl_style
+  \ underline_hyperlinks update_check_interval url_color
+  \ url_excluded_characters url_prefixes url_style visual_bell_color
+  \ visual_bell_duration visual_window_select_characters watcher
+  \ wayland_enable_ime wayland_titlebar_color wheel_scroll_min_lines
+  \ wheel_scroll_multiplier window_alert_on_bell window_border_width
+  \ window_logo_alpha window_logo_path window_logo_position window_logo_scale
   \ window_margin_width window_padding_width window_resize_step_cells
   \ window_resize_step_lines
 

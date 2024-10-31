@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.36.4
+" Version: 0.37.0
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "
@@ -105,6 +105,7 @@ syn keyword kittyKeyword contained
   \ color255 command_on_bell confirm_os_window_close copy_on_select cursor
   \ cursor_beam_thickness cursor_blink_interval cursor_shape
   \ cursor_shape_unfocused cursor_stop_blinking_after cursor_text_color
+  \ cursor_trail cursor_trail_decay cursor_trail_start_threshold
   \ cursor_underline_thickness default_pointer_shape detect_urls dim_opacity
   \ disable_ligatures draw_minimal_borders dynamic_background_opacity editor
   \ enable_audio_bell enabled_layouts env exe_search_path

@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.39.1
+" Version: 0.40.0
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "
@@ -138,7 +138,7 @@ syn keyword kittyKeyword contained
   \ tab_title_max_length tab_title_template term terminfo_type
   \ text_composition_strategy text_fg_override_threshold
   \ touch_scroll_multiplier transparent_background_colors undercurl_style
-  \ underline_hyperlinks update_check_interval url_color
+  \ underline_exclusion underline_hyperlinks update_check_interval url_color
   \ url_excluded_characters url_prefixes url_style visual_bell_color
   \ visual_bell_duration visual_window_select_characters watcher
   \ wayland_enable_ime wayland_titlebar_color wheel_scroll_min_lines

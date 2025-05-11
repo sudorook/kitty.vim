@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.41.1
+" Version: 0.42.0
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "
@@ -179,7 +179,8 @@ syn keyword kittyAction contained
   \ seventh_window show_error show_first_command_output_on_screen
   \ show_kitty_doc show_kitty_env_vars show_last_command_output
   \ show_last_non_empty_command_output show_last_visited_command_output
-  \ show_scrollback signal_child sixth_window sleep start_resizing_window
-  \ swap_with_window tenth_window third_window toggle_fullscreen toggle_layout
+  \ show_scrollback signal_child simulate_color_scheme_preference_change
+  \ sixth_window sleep start_resizing_window swap_with_window tenth_window
+  \ third_window toggle_fullscreen toggle_layout
   \ toggle_macos_secure_keyboard_entry toggle_marker toggle_maximized
   \ toggle_tab triplepress

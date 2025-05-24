@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.42.0
+" Version: 0.42.1
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "
@@ -125,21 +125,22 @@ syn keyword kittyKeyword contained
   \ menu_map modify_font mouse_hide_wait mouse_map narrow_symbols
   \ notify_on_cmd_finish open_url_with paste_actions placement_strategy
   \ pointer_shape_when_dragging pointer_shape_when_grabbed
-  \ remember_window_size remote_control_password repaint_delay
-  \ resize_debounce_time resize_in_steps scrollback_fill_enlarged_window
-  \ scrollback_indicator_opacity scrollback_lines scrollback_pager
-  \ scrollback_pager_history_size select_by_word_characters
-  \ select_by_word_characters_forward selection_background
-  \ selection_foreground shell shell_integration show_hyperlink_targets
-  \ single_window_margin_width single_window_padding_width startup_session
-  \ strip_trailing_spaces symbol_map sync_to_monitor tab_activity_symbol
-  \ tab_bar_align tab_bar_background tab_bar_edge tab_bar_margin_color
-  \ tab_bar_margin_height tab_bar_margin_width tab_bar_min_tabs tab_bar_style
-  \ tab_fade tab_powerline_style tab_separator tab_switch_strategy
-  \ tab_title_max_length tab_title_template term terminfo_type
-  \ text_composition_strategy text_fg_override_threshold
-  \ touch_scroll_multiplier transparent_background_colors undercurl_style
-  \ underline_exclusion underline_hyperlinks update_check_interval url_color
+  \ remember_window_position remember_window_size remote_control_password
+  \ repaint_delay resize_debounce_time resize_in_steps
+  \ scrollback_fill_enlarged_window scrollback_indicator_opacity
+  \ scrollback_lines scrollback_pager scrollback_pager_history_size
+  \ select_by_word_characters select_by_word_characters_forward
+  \ selection_background selection_foreground shell shell_integration
+  \ show_hyperlink_targets single_window_margin_width
+  \ single_window_padding_width startup_session strip_trailing_spaces
+  \ symbol_map sync_to_monitor tab_activity_symbol tab_bar_align
+  \ tab_bar_background tab_bar_edge tab_bar_margin_color tab_bar_margin_height
+  \ tab_bar_margin_width tab_bar_min_tabs tab_bar_style tab_fade
+  \ tab_powerline_style tab_separator tab_switch_strategy tab_title_max_length
+  \ tab_title_template term terminfo_type text_composition_strategy
+  \ text_fg_override_threshold touch_scroll_multiplier
+  \ transparent_background_colors undercurl_style underline_exclusion
+  \ underline_hyperlinks update_check_interval url_color
   \ url_excluded_characters url_prefixes url_style visual_bell_color
   \ visual_bell_duration visual_window_select_characters watcher
   \ wayland_enable_ime wayland_titlebar_color wheel_scroll_min_lines

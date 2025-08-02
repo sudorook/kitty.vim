@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.42.1
+" Version: 0.42.2
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "
@@ -106,17 +106,18 @@ syn keyword kittyKeyword contained
   \ command_on_bell confirm_os_window_close copy_on_select cursor
   \ cursor_beam_thickness cursor_blink_interval cursor_shape
   \ cursor_shape_unfocused cursor_stop_blinking_after cursor_text_color
-  \ cursor_trail cursor_trail_decay cursor_trail_start_threshold
-  \ cursor_underline_thickness default_pointer_shape detect_urls dim_opacity
-  \ disable_ligatures draw_minimal_borders dynamic_background_opacity editor
-  \ enable_audio_bell enabled_layouts env exe_search_path
-  \ file_transfer_confirmation_bypass filter_notification focus_follows_mouse
-  \ font_family font_features font_size force_ltr foreground forward_stdio
-  \ hide_window_decorations inactive_border_color inactive_tab_background
-  \ inactive_tab_font_style inactive_tab_foreground inactive_text_alpha
-  \ initial_window_height initial_window_width input_delay italic_font
-  \ kitten_alias kitty_mod linux_bell_theme linux_display_server listen_on
-  \ macos_colorspace macos_custom_beam_cursor macos_hide_from_tasks
+  \ cursor_trail cursor_trail_color cursor_trail_decay
+  \ cursor_trail_start_threshold cursor_underline_thickness
+  \ default_pointer_shape detect_urls dim_opacity disable_ligatures
+  \ draw_minimal_borders dynamic_background_opacity editor enable_audio_bell
+  \ enabled_layouts env exe_search_path file_transfer_confirmation_bypass
+  \ filter_notification focus_follows_mouse font_family font_features
+  \ font_size force_ltr foreground forward_stdio hide_window_decorations
+  \ inactive_border_color inactive_tab_background inactive_tab_font_style
+  \ inactive_tab_foreground inactive_text_alpha initial_window_height
+  \ initial_window_width input_delay italic_font kitten_alias kitty_mod
+  \ linux_bell_theme linux_display_server listen_on macos_colorspace
+  \ macos_custom_beam_cursor macos_hide_from_tasks
   \ macos_menubar_title_max_length macos_option_as_alt
   \ macos_quit_when_last_window_closed macos_show_window_title_in
   \ macos_thicken_font macos_titlebar_color macos_traditional_fullscreen
@@ -159,8 +160,8 @@ syn keyword kittyAction contained
   \ detach_window disable_ligatures_in discard_event doubleclick doublepress
   \ dump_lines_with_attrs edit_config_file eighth_window fifth_window
   \ first_window focus_visible_window fourth_window goto_layout goto_tab
-  \ hide_macos_app hide_macos_other_apps input_unicode_character kitten
-  \ kitty_shell last_used_layout launch layout_action load_config_file
+  \ grab_keyboard hide_macos_app hide_macos_other_apps input_unicode_character
+  \ kitten kitty_shell last_used_layout launch layout_action load_config_file
   \ minimize_macos_window mouse_click_url mouse_click_url_or_select
   \ mouse_handle_click mouse_select_command_output mouse_selection
   \ mouse_show_command_output move_tab_backward move_tab_forward move_window
@@ -184,4 +185,4 @@ syn keyword kittyAction contained
   \ sixth_window sleep start_resizing_window swap_with_window tenth_window
   \ third_window toggle_fullscreen toggle_layout
   \ toggle_macos_secure_keyboard_entry toggle_marker toggle_maximized
-  \ toggle_tab triplepress
+  \ toggle_tab triplepress ungrab_keyboard

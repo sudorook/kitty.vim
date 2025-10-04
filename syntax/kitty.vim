@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.42.2
+" Version: 0.43.0
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "
@@ -128,20 +128,24 @@ syn keyword kittyKeyword contained
   \ pointer_shape_when_dragging pointer_shape_when_grabbed
   \ remember_window_position remember_window_size remote_control_password
   \ repaint_delay resize_debounce_time resize_in_steps
-  \ scrollback_fill_enlarged_window scrollback_indicator_opacity
-  \ scrollback_lines scrollback_pager scrollback_pager_history_size
+  \ scrollback_fill_enlarged_window scrollback_lines scrollback_pager
+  \ scrollback_pager_history_size scrollbar scrollbar_gap
+  \ scrollbar_handle_color scrollbar_handle_opacity scrollbar_hitbox_expansion
+  \ scrollbar_hover_width scrollbar_interactive scrollbar_jump_on_click
+  \ scrollbar_min_handle_height scrollbar_radius scrollbar_track_color
+  \ scrollbar_track_hover_opacity scrollbar_track_opacity scrollbar_width
   \ select_by_word_characters select_by_word_characters_forward
   \ selection_background selection_foreground shell shell_integration
   \ show_hyperlink_targets single_window_margin_width
   \ single_window_padding_width startup_session strip_trailing_spaces
   \ symbol_map sync_to_monitor tab_activity_symbol tab_bar_align
-  \ tab_bar_background tab_bar_edge tab_bar_margin_color tab_bar_margin_height
-  \ tab_bar_margin_width tab_bar_min_tabs tab_bar_style tab_fade
-  \ tab_powerline_style tab_separator tab_switch_strategy tab_title_max_length
-  \ tab_title_template term terminfo_type text_composition_strategy
-  \ text_fg_override_threshold touch_scroll_multiplier
-  \ transparent_background_colors undercurl_style underline_exclusion
-  \ underline_hyperlinks update_check_interval url_color
+  \ tab_bar_background tab_bar_edge tab_bar_filter tab_bar_margin_color
+  \ tab_bar_margin_height tab_bar_margin_width tab_bar_min_tabs tab_bar_style
+  \ tab_fade tab_powerline_style tab_separator tab_switch_strategy
+  \ tab_title_max_length tab_title_template term terminfo_type
+  \ text_composition_strategy text_fg_override_threshold
+  \ touch_scroll_multiplier transparent_background_colors undercurl_style
+  \ underline_exclusion underline_hyperlinks update_check_interval url_color
   \ url_excluded_characters url_prefixes url_style visual_bell_color
   \ visual_bell_duration visual_window_select_characters watcher
   \ wayland_enable_ime wayland_titlebar_color wheel_scroll_min_lines
@@ -153,36 +157,36 @@ syn keyword kittyKeyword contained
 syn keyword kittyAction contained
   \ change_font_size clear_selection clear_terminal click close_os_window
   \ close_other_os_windows close_other_tabs_in_os_window
-  \ close_other_windows_in_tab close_shared_ssh_connections close_tab
-  \ close_window close_window_with_confirmation combine
+  \ close_other_windows_in_tab close_session close_shared_ssh_connections
+  \ close_tab close_window close_window_with_confirmation combine
   \ copy_and_clear_or_interrupt copy_ansi_to_clipboard copy_or_interrupt
-  \ copy_to_buffer copy_to_clipboard create_marker debug_config detach_tab
-  \ detach_window disable_ligatures_in discard_event doubleclick doublepress
-  \ dump_lines_with_attrs edit_config_file eighth_window fifth_window
-  \ first_window focus_visible_window fourth_window goto_layout goto_tab
-  \ grab_keyboard hide_macos_app hide_macos_other_apps input_unicode_character
-  \ kitten kitty_shell last_used_layout launch layout_action load_config_file
-  \ minimize_macos_window mouse_click_url mouse_click_url_or_select
-  \ mouse_handle_click mouse_select_command_output mouse_selection
-  \ mouse_show_command_output move_tab_backward move_tab_forward move_window
-  \ move_window_backward move_window_forward move_window_to_top
-  \ neighboring_window new_os_window new_os_window_with_cwd new_tab
-  \ new_tab_with_cwd new_window new_window_with_cwd next_layout next_tab
-  \ next_window ninth_window no_op nth_os_window nth_window open_url
+  \ copy_or_noop copy_to_buffer copy_to_clipboard create_marker debug_config
+  \ detach_tab detach_window disable_ligatures_in discard_event doubleclick
+  \ doublepress dump_lines_with_attrs edit_config_file eighth_window
+  \ fifth_window first_window focus_visible_window fourth_window goto_layout
+  \ goto_session goto_tab grab_keyboard hide_macos_app hide_macos_other_apps
+  \ input_unicode_character kitten kitty_shell last_used_layout launch
+  \ layout_action load_config_file minimize_macos_window mouse_click_url
+  \ mouse_click_url_or_select mouse_handle_click mouse_select_command_output
+  \ mouse_selection mouse_show_command_output move_tab_backward
+  \ move_tab_forward move_window move_window_backward move_window_forward
+  \ move_window_to_top neighboring_window new_os_window new_os_window_with_cwd
+  \ new_tab new_tab_with_cwd new_window new_window_with_cwd next_layout
+  \ next_tab next_window ninth_window no_op nth_os_window nth_window open_url
   \ open_url_with_hints pass_selection_to_program paste paste_from_buffer
   \ paste_from_clipboard paste_from_selection paste_selection
   \ paste_selection_or_clipboard pop_keyboard_mode press previous_tab
   \ previous_window push_keyboard_mode quit release remote_control
   \ remote_control_script remove_marker reset_window_sizes resize_window
-  \ scroll_end scroll_home scroll_line_down scroll_line_up scroll_page_down
-  \ scroll_page_up scroll_prompt_to_bottom scroll_prompt_to_top scroll_to_mark
-  \ scroll_to_prompt second_window select_tab send_key send_text
-  \ set_background_opacity set_colors set_tab_title set_window_title
-  \ seventh_window show_error show_first_command_output_on_screen
-  \ show_kitty_doc show_kitty_env_vars show_last_command_output
-  \ show_last_non_empty_command_output show_last_visited_command_output
-  \ show_scrollback signal_child simulate_color_scheme_preference_change
-  \ sixth_window sleep start_resizing_window swap_with_window tenth_window
-  \ third_window toggle_fullscreen toggle_layout
-  \ toggle_macos_secure_keyboard_entry toggle_marker toggle_maximized
-  \ toggle_tab triplepress ungrab_keyboard
+  \ save_as_session scroll_end scroll_home scroll_line_down scroll_line_up
+  \ scroll_page_down scroll_page_up scroll_prompt_to_bottom
+  \ scroll_prompt_to_top scroll_to_mark scroll_to_prompt second_window
+  \ select_tab send_key send_text set_background_opacity set_colors
+  \ set_tab_title set_window_title seventh_window show_error
+  \ show_first_command_output_on_screen show_kitty_doc show_kitty_env_vars
+  \ show_last_command_output show_last_non_empty_command_output
+  \ show_last_visited_command_output show_scrollback signal_child
+  \ simulate_color_scheme_preference_change sixth_window sleep
+  \ start_resizing_window swap_with_window tenth_window third_window
+  \ toggle_fullscreen toggle_layout toggle_macos_secure_keyboard_entry
+  \ toggle_marker toggle_maximized toggle_tab triplepress ungrab_keyboard

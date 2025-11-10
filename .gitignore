@@ -173,13 +173,6 @@ Temporary Items
 *.rej
 
 #
-# FROM: https://raw.githubusercontent.com/sudorook/gitignore/tweak/Global/Syncthing.gitignore
-#
-
-# Syncthing caches
-.stversions
-
-#
 # FROM: https://raw.githubusercontent.com/sudorook/gitignore/tweak/Global/Vim.gitignore
 #
 

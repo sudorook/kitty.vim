@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.43.1
+" Version: 0.44.0
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "
@@ -109,15 +109,15 @@ syn keyword kittyKeyword contained
   \ cursor_trail cursor_trail_color cursor_trail_decay
   \ cursor_trail_start_threshold cursor_underline_thickness
   \ default_pointer_shape detect_urls dim_opacity disable_ligatures
-  \ draw_minimal_borders dynamic_background_opacity editor enable_audio_bell
-  \ enabled_layouts env exe_search_path file_transfer_confirmation_bypass
-  \ filter_notification focus_follows_mouse font_family font_features
-  \ font_size force_ltr foreground forward_stdio hide_window_decorations
-  \ inactive_border_color inactive_tab_background inactive_tab_font_style
-  \ inactive_tab_foreground inactive_text_alpha initial_window_height
-  \ initial_window_width input_delay italic_font kitten_alias kitty_mod
-  \ linux_bell_theme linux_display_server listen_on macos_colorspace
-  \ macos_custom_beam_cursor macos_hide_from_tasks
+  \ draw_minimal_borders draw_window_borders_for_single_window
+  \ dynamic_background_opacity editor enable_audio_bell enabled_layouts env
+  \ exe_search_path file_transfer_confirmation_bypass filter_notification
+  \ focus_follows_mouse font_family font_features font_size force_ltr
+  \ foreground forward_stdio hide_window_decorations inactive_border_color
+  \ inactive_tab_background inactive_tab_font_style inactive_tab_foreground
+  \ inactive_text_alpha initial_window_height initial_window_width input_delay
+  \ italic_font kitten_alias kitty_mod linux_bell_theme linux_display_server
+  \ listen_on macos_colorspace macos_custom_beam_cursor macos_hide_from_tasks
   \ macos_menubar_title_max_length macos_option_as_alt
   \ macos_quit_when_last_window_closed macos_show_window_title_in
   \ macos_thicken_font macos_titlebar_color macos_traditional_fullscreen
@@ -159,20 +159,22 @@ syn keyword kittyAction contained
   \ close_other_os_windows close_other_tabs_in_os_window
   \ close_other_windows_in_tab close_session close_shared_ssh_connections
   \ close_tab close_window close_window_with_confirmation combine
-  \ copy_and_clear_or_interrupt copy_ansi_to_clipboard copy_or_interrupt
-  \ copy_or_noop copy_to_buffer copy_to_clipboard create_marker debug_config
-  \ detach_tab detach_window disable_ligatures_in discard_event doubleclick
-  \ doublepress dump_lines_with_attrs edit_config_file eighth_window
-  \ fifth_window first_window focus_visible_window fourth_window goto_layout
-  \ goto_session goto_tab grab_keyboard hide_macos_app hide_macos_other_apps
+  \ copy_and_clear_or_interrupt copy_ansi_to_clipboard
+  \ copy_last_command_output copy_or_interrupt copy_or_noop copy_to_buffer
+  \ copy_to_clipboard create_marker debug_config detach_tab detach_window
+  \ disable_ligatures_in discard_event doubleclick doublepress
+  \ dump_lines_with_attrs edit_config_file eighth_window fifth_window
+  \ first_window focus_visible_window fourth_window goto_layout goto_session
+  \ goto_tab grab_keyboard hide_macos_app hide_macos_other_apps
   \ input_unicode_character kitten kitty_shell last_used_layout launch
-  \ layout_action load_config_file minimize_macos_window mouse_click_url
-  \ mouse_click_url_or_select mouse_handle_click mouse_select_command_output
-  \ mouse_selection mouse_show_command_output move_tab_backward
-  \ move_tab_forward move_window move_window_backward move_window_forward
-  \ move_window_to_top neighboring_window new_os_window new_os_window_with_cwd
-  \ new_tab new_tab_with_cwd new_window new_window_with_cwd next_layout
-  \ next_tab next_window ninth_window no_op nth_os_window nth_window open_url
+  \ layout_action load_config_file macos_cycle_through_os_windows
+  \ minimize_macos_window mouse_click_url mouse_click_url_or_select
+  \ mouse_handle_click mouse_select_command_output mouse_selection
+  \ mouse_show_command_output move_tab_backward move_tab_forward move_window
+  \ move_window_backward move_window_forward move_window_to_top
+  \ neighboring_window new_os_window new_os_window_with_cwd new_tab
+  \ new_tab_with_cwd new_window new_window_with_cwd next_layout next_tab
+  \ next_window ninth_window no_op nth_os_window nth_window open_url
   \ open_url_with_hints pass_selection_to_program paste paste_from_buffer
   \ paste_from_clipboard paste_from_selection paste_selection
   \ paste_selection_or_clipboard pop_keyboard_mode press previous_tab

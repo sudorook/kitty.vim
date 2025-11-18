@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.44.0
+" Version: 0.45.0
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "
@@ -168,27 +168,28 @@ syn keyword kittyAction contained
   \ goto_tab grab_keyboard hide_macos_app hide_macos_other_apps
   \ input_unicode_character kitten kitty_shell last_used_layout launch
   \ layout_action load_config_file macos_cycle_through_os_windows
-  \ minimize_macos_window mouse_click_url mouse_click_url_or_select
-  \ mouse_handle_click mouse_select_command_output mouse_selection
-  \ mouse_show_command_output move_tab_backward move_tab_forward move_window
-  \ move_window_backward move_window_forward move_window_to_top
-  \ neighboring_window new_os_window new_os_window_with_cwd new_tab
-  \ new_tab_with_cwd new_window new_window_with_cwd next_layout next_tab
-  \ next_window ninth_window no_op nth_os_window nth_window open_url
-  \ open_url_with_hints pass_selection_to_program paste paste_from_buffer
-  \ paste_from_clipboard paste_from_selection paste_selection
-  \ paste_selection_or_clipboard pop_keyboard_mode press previous_tab
-  \ previous_window push_keyboard_mode quit release remote_control
-  \ remote_control_script remove_marker reset_window_sizes resize_window
-  \ save_as_session scroll_end scroll_home scroll_line_down scroll_line_up
-  \ scroll_page_down scroll_page_up scroll_prompt_to_bottom
-  \ scroll_prompt_to_top scroll_to_mark scroll_to_prompt second_window
-  \ select_tab send_key send_text set_background_opacity set_colors
-  \ set_tab_title set_window_title seventh_window show_error
-  \ show_first_command_output_on_screen show_kitty_doc show_kitty_env_vars
-  \ show_last_command_output show_last_non_empty_command_output
-  \ show_last_visited_command_output show_scrollback signal_child
-  \ simulate_color_scheme_preference_change sixth_window sleep
-  \ start_resizing_window swap_with_window tenth_window third_window
-  \ toggle_fullscreen toggle_layout toggle_macos_secure_keyboard_entry
-  \ toggle_marker toggle_maximized toggle_tab triplepress ungrab_keyboard
+  \ macos_cycle_through_os_windows_backwards minimize_macos_window
+  \ mouse_click_url mouse_click_url_or_select mouse_handle_click
+  \ mouse_select_command_output mouse_selection mouse_show_command_output
+  \ move_tab_backward move_tab_forward move_window move_window_backward
+  \ move_window_forward move_window_to_top neighboring_window new_os_window
+  \ new_os_window_with_cwd new_tab new_tab_with_cwd new_window
+  \ new_window_with_cwd next_layout next_tab next_window ninth_window no_op
+  \ nth_os_window nth_window open_url open_url_with_hints
+  \ pass_selection_to_program paste paste_from_buffer paste_from_clipboard
+  \ paste_from_selection paste_selection paste_selection_or_clipboard
+  \ pop_keyboard_mode press previous_tab previous_window push_keyboard_mode
+  \ quit release remote_control remote_control_script remove_marker
+  \ reset_window_sizes resize_window save_as_session scroll_end scroll_home
+  \ scroll_line_down scroll_line_up scroll_page_down scroll_page_up
+  \ scroll_prompt_to_bottom scroll_prompt_to_top scroll_to_mark
+  \ scroll_to_prompt search_scrollback second_window select_tab send_key
+  \ send_text set_background_opacity set_colors set_tab_title set_window_title
+  \ seventh_window show_error show_first_command_output_on_screen
+  \ show_kitty_doc show_kitty_env_vars show_last_command_output
+  \ show_last_non_empty_command_output show_last_visited_command_output
+  \ show_scrollback signal_child simulate_color_scheme_preference_change
+  \ sixth_window sleep start_resizing_window swap_with_window tenth_window
+  \ third_window toggle_fullscreen toggle_layout
+  \ toggle_macos_secure_keyboard_entry toggle_marker toggle_maximized
+  \ toggle_tab triplepress ungrab_keyboard

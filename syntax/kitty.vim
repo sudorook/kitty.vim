@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.46.2
+" Version: 0.47.0
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "
@@ -66,10 +66,10 @@ syn keyword kittyKeyword contained
   \ action_alias active_border_color active_tab_background
   \ active_tab_font_style active_tab_foreground active_tab_title_template
   \ active_window_title_template allow_cloning allow_hyperlinks
-  \ allow_remote_control background background_blur background_image
-  \ background_image_layout background_image_linear background_opacity
-  \ background_tint background_tint_gaps bell_border_color bell_on_tab
-  \ bell_path bold_font bold_italic_font box_drawing_scale
+  \ allow_remote_control auto_reload_config background background_blur
+  \ background_image background_image_layout background_image_linear
+  \ background_opacity background_tint background_tint_gaps bell_border_color
+  \ bell_on_tab bell_path bold_font bold_italic_font box_drawing_scale
   \ clear_all_mouse_actions clear_all_shortcuts
   \ clear_selection_on_clipboard_loss click_interval clipboard_control
   \ clipboard_max_size clone_source_strategies close_on_child_death color0
@@ -109,7 +109,7 @@ syn keyword kittyKeyword contained
   \ cursor_text_color cursor_trail cursor_trail_color cursor_trail_decay
   \ cursor_trail_start_threshold cursor_underline_thickness
   \ default_pointer_shape detect_urls dim_opacity disable_ligatures
-  \ draw_minimal_borders draw_window_borders_for_single_window
+  \ drag_threshold draw_minimal_borders draw_window_borders_for_single_window
   \ dynamic_background_opacity editor enable_audio_bell enabled_layouts env
   \ exe_search_path file_transfer_confirmation_bypass filter_notification
   \ focus_follows_mouse font_family font_features font_size force_ltr
@@ -118,35 +118,36 @@ syn keyword kittyKeyword contained
   \ inactive_text_alpha initial_window_height initial_window_width input_delay
   \ italic_font kitten_alias kitty_mod linux_bell_theme linux_display_server
   \ listen_on macos_colorspace macos_custom_beam_cursor
-  \ macos_dock_badge_on_bell macos_hide_from_tasks
-  \ macos_menubar_title_max_length macos_option_as_alt
+  \ macos_dock_badge_on_bell macos_fullscreen_ignore_safe_area_insets
+  \ macos_hide_from_tasks macos_menubar_title_max_length macos_option_as_alt
   \ macos_quit_when_last_window_closed macos_show_window_title_in
   \ macos_thicken_font macos_titlebar_color macos_traditional_fullscreen
   \ macos_window_resizable map map_timeout mark1_background mark1_foreground
   \ mark2_background mark2_foreground mark3_background mark3_foreground
   \ menu_map modify_font momentum_scroll mouse_hide_wait mouse_map
-  \ narrow_symbols notify_on_cmd_finish open_url_with paste_actions
-  \ pixel_scroll placement_strategy pointer_shape_when_dragging
-  \ pointer_shape_when_grabbed remember_window_position remember_window_size
-  \ remote_control_password repaint_delay resize_debounce_time resize_in_steps
-  \ scrollback_fill_enlarged_window scrollback_lines scrollback_pager
-  \ scrollback_pager_history_size scrollbar scrollbar_gap
-  \ scrollbar_handle_color scrollbar_handle_opacity scrollbar_hitbox_expansion
-  \ scrollbar_hover_width scrollbar_interactive scrollbar_jump_on_click
-  \ scrollbar_min_handle_height scrollbar_radius scrollbar_track_color
-  \ scrollbar_track_hover_opacity scrollbar_track_opacity scrollbar_width
-  \ select_by_word_characters select_by_word_characters_forward
-  \ selection_background selection_foreground shell shell_integration
-  \ show_hyperlink_targets single_window_margin_width
-  \ single_window_padding_width startup_session strip_trailing_spaces
-  \ symbol_map sync_to_monitor tab_activity_symbol tab_bar_align
-  \ tab_bar_background tab_bar_drag_threshold tab_bar_edge tab_bar_filter
+  \ narrow_symbols notify_on_cmd_finish open_url_with palette_generate
+  \ paste_actions pixel_scroll placement_strategy pointer_shape_when_dragging
+  \ pointer_shape_when_grabbed progress_bar remember_window_position
+  \ remember_window_size remote_control_password repaint_delay
+  \ resize_debounce_time resize_in_steps scrollback_fill_enlarged_window
+  \ scrollback_lines scrollback_pager scrollback_pager_history_size scrollbar
+  \ scrollbar_gap scrollbar_handle_color scrollbar_handle_opacity
+  \ scrollbar_hitbox_expansion scrollbar_hover_width scrollbar_interactive
+  \ scrollbar_jump_on_click scrollbar_min_handle_height scrollbar_radius
+  \ scrollbar_track_color scrollbar_track_hover_opacity
+  \ scrollbar_track_opacity scrollbar_width select_by_word_characters
+  \ select_by_word_characters_forward selection_background
+  \ selection_foreground shell shell_integration show_hyperlink_targets
+  \ single_window_margin_width single_window_padding_width startup_session
+  \ strip_trailing_spaces symbol_map sync_to_monitor tab_activity_symbol
+  \ tab_bar_align tab_bar_background tab_bar_edge tab_bar_filter
   \ tab_bar_margin_color tab_bar_margin_height tab_bar_margin_width
-  \ tab_bar_min_tabs tab_bar_style tab_fade tab_powerline_style tab_separator
-  \ tab_switch_strategy tab_title_max_length tab_title_template term
-  \ terminfo_type text_composition_strategy text_fg_override_threshold
-  \ touch_scroll_multiplier transparent_background_colors undercurl_style
-  \ underline_exclusion underline_hyperlinks update_check_interval url_color
+  \ tab_bar_min_tabs tab_bar_show_new_tab_button tab_bar_style tab_fade
+  \ tab_powerline_style tab_separator tab_switch_strategy tab_title_max_length
+  \ tab_title_template term terminfo_type text_composition_strategy
+  \ text_fg_override_threshold touch_scroll_multiplier
+  \ transparent_background_colors undercurl_style underline_exclusion
+  \ underline_hyperlinks update_check_interval url_color
   \ url_excluded_characters url_prefixes url_style visual_bell_color
   \ visual_bell_duration visual_window_select_characters watcher
   \ wayland_enable_ime wayland_titlebar_color wheel_scroll_min_lines
@@ -198,4 +199,4 @@ syn keyword kittyAction contained
   \ start_resizing_window swap_with_window tenth_window test_dragging
   \ third_window toggle_fullscreen toggle_layout
   \ toggle_macos_secure_keyboard_entry toggle_marker toggle_maximized
-  \ toggle_tab triplepress ungrab_keyboard
+  \ toggle_tab toggle_window_title_bars triplepress ungrab_keyboard

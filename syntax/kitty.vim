@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.47.4
+" Version: 0.48.0
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "
@@ -119,9 +119,10 @@ syn keyword kittyKeyword contained
   \ italic_font kitten_alias kitty_mod linux_bell_theme linux_display_server
   \ listen_on macos_colorspace macos_custom_beam_cursor
   \ macos_dock_badge_on_bell macos_fullscreen_ignore_safe_area_insets
-  \ macos_hide_from_tasks macos_menubar_title_max_length macos_option_as_alt
-  \ macos_quit_when_last_window_closed macos_show_window_title_in
-  \ macos_thicken_font macos_titlebar_color macos_traditional_fullscreen
+  \ macos_hide_from_tasks macos_menubar_title_max_length macos_ns_window_layer
+  \ macos_option_as_alt macos_quit_when_last_window_closed
+  \ macos_show_window_title_in macos_thicken_font macos_titlebar_color
+  \ macos_traditional_fullscreen macos_use_physical_screen_frame
   \ macos_window_resizable map map_timeout mark1_background mark1_foreground
   \ mark2_background mark2_foreground mark3_background mark3_foreground
   \ menu_map modify_font momentum_scroll mouse_hide_wait mouse_map

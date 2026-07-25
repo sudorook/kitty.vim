@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.48.0
+" Version: 0.48.1
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "

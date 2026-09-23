@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Kitty
-" Version: 0.48.2
+" Version: 0.49.0
 
 " SPDX-FileCopyrightText: 2022 sudorook <daemon@nullcodon.com>
 "
@@ -107,7 +107,7 @@ syn keyword kittyKeyword contained
   \ copy_on_select cursor cursor_beam_thickness cursor_blink_interval
   \ cursor_shape cursor_shape_unfocused cursor_stop_blinking_after
   \ cursor_text_color cursor_trail cursor_trail_color cursor_trail_decay
-  \ cursor_trail_start_threshold cursor_underline_thickness
+  \ cursor_trail_start_threshold cursor_underline_thickness custom_shaders
   \ default_pointer_shape detect_urls dim_opacity disable_ligatures
   \ drag_threshold draw_minimal_borders draw_window_borders_for_single_window
   \ dynamic_background_opacity editor enable_audio_bell enabled_layouts env
@@ -126,40 +126,42 @@ syn keyword kittyKeyword contained
   \ macos_window_resizable map map_timeout mark1_background mark1_foreground
   \ mark2_background mark2_foreground mark3_background mark3_foreground
   \ menu_map modify_font momentum_scroll mouse_hide_wait mouse_map
-  \ narrow_symbols notify_on_cmd_finish open_url_with palette_generate
-  \ paste_actions pixel_scroll placement_strategy pointer_shape_when_dragging
-  \ pointer_shape_when_grabbed progress_bar remember_window_position
-  \ remember_window_size remote_control_password repaint_delay
-  \ resize_debounce_time resize_in_steps scrollback_fill_enlarged_window
-  \ scrollback_lines scrollback_pager scrollback_pager_history_size scrollbar
-  \ scrollbar_gap scrollbar_handle_color scrollbar_handle_opacity
-  \ scrollbar_hitbox_expansion scrollbar_hover_width scrollbar_interactive
-  \ scrollbar_jump_on_click scrollbar_min_handle_height scrollbar_radius
-  \ scrollbar_track_color scrollbar_track_hover_opacity
-  \ scrollbar_track_opacity scrollbar_width select_by_word_characters
-  \ select_by_word_characters_forward selection_background
-  \ selection_foreground shell shell_integration show_hyperlink_targets
-  \ single_window_margin_width single_window_padding_width startup_session
-  \ strip_trailing_spaces symbol_map sync_to_monitor tab_activity_symbol
-  \ tab_bar_align tab_bar_background tab_bar_edge tab_bar_filter
-  \ tab_bar_margin_color tab_bar_margin_height tab_bar_margin_width
-  \ tab_bar_min_tabs tab_bar_show_new_tab_button tab_bar_style tab_fade
-  \ tab_powerline_style tab_separator tab_switch_strategy tab_title_max_length
-  \ tab_title_template term terminfo_type text_composition_strategy
-  \ text_fg_override_threshold touch_scroll_multiplier
-  \ transparent_background_colors undercurl_style underline_exclusion
-  \ underline_hyperlinks update_check_interval url_color
+  \ narrow_symbols notify_on_cmd_finish open_url_with padding_fill_strategy
+  \ palette_generate paste_actions pixel_scroll placement_strategy
+  \ pointer_shape_when_dragging pointer_shape_when_grabbed progress_bar
+  \ remap_modifiers remember_window_position remember_window_size
+  \ remote_control_password repaint_delay resize_debounce_time resize_in_steps
+  \ scrollback_fill_enlarged_window scrollback_lines scrollback_pager
+  \ scrollback_pager_history_size scrollbar scrollbar_gap
+  \ scrollbar_handle_color scrollbar_handle_opacity scrollbar_hitbox_expansion
+  \ scrollbar_hover_width scrollbar_interactive scrollbar_jump_on_click
+  \ scrollbar_min_handle_height scrollbar_radius scrollbar_track_color
+  \ scrollbar_track_hover_opacity scrollbar_track_opacity scrollbar_width
+  \ select_by_word_characters select_by_word_characters_forward
+  \ selection_background selection_foreground shell shell_integration
+  \ show_hyperlink_targets single_window_margin_width
+  \ single_window_padding_width startup_session strip_trailing_spaces
+  \ symbol_map sync_to_monitor tab_activity_symbol tab_bar_align
+  \ tab_bar_background tab_bar_edge tab_bar_filter tab_bar_margin_color
+  \ tab_bar_margin_height tab_bar_margin_width tab_bar_min_tabs
+  \ tab_bar_show_new_tab_button tab_bar_style tab_fade tab_powerline_style
+  \ tab_separator tab_switch_strategy tab_title_max_length tab_title_max_lines
+  \ tab_title_template tab_title_wrap term terminfo_type
+  \ text_composition_strategy text_fg_override_threshold
+  \ touch_scroll_multiplier transparent_background_colors undercurl_style
+  \ underline_exclusion underline_hyperlinks update_check_interval url_color
   \ url_excluded_characters url_prefixes url_style visual_bell_color
   \ visual_bell_duration visual_window_select_characters watcher
   \ wayland_enable_ime wayland_titlebar_color wheel_scroll_min_lines
-  \ wheel_scroll_multiplier window_alert_on_bell window_border_width
-  \ window_drag_tolerance window_logo_alpha window_logo_path
-  \ window_logo_position window_logo_scale window_margin_width
-  \ window_padding_width window_resize_step_cells window_resize_step_lines
-  \ window_title_bar window_title_bar_active_background
-  \ window_title_bar_active_foreground window_title_bar_align
-  \ window_title_bar_inactive_background window_title_bar_inactive_foreground
-  \ window_title_bar_min_windows window_title_template
+  \ wheel_scroll_multiplier window_alert_on_bell window_border_radius
+  \ window_border_width window_drag_tolerance window_logo_alpha
+  \ window_logo_path window_logo_position window_logo_scale
+  \ window_margin_width window_padding_width window_resize_step_cells
+  \ window_resize_step_lines window_title_bar
+  \ window_title_bar_active_background window_title_bar_active_foreground
+  \ window_title_bar_align window_title_bar_inactive_background
+  \ window_title_bar_inactive_foreground window_title_bar_min_windows
+  \ window_title_template
 
 syn keyword kittyAction contained
   \ change_font_size clear_selection clear_terminal click close_os_window
